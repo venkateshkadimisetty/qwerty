@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Management Dashboard</title>
+    <script data-require="angular.js@1.4.3" data-semver="1.4.3" src="https://code.angularjs.org/1.4.3/angular.js"></script>
+    <script data-require="ui-router@*" data-semver="0.2.14" src="//rawgit.com/angular-ui/ui-router/0.2.14/release/angular-ui-router.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-cookies.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.1.4/ui-bootstrap-tpls.js"></script>
+    <!--<link href="//cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/2.1.0/toaster.css" rel="stylesheet" />-->
+    <!--<script src="http://code.angularjs.org/1.4.2/angular-animate.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/2.1.0/toaster.js"></script>-->
+    <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
+    <script type="text/javascript" src="https://code.highcharts.com/modules/exporting.js"></script>
+
+
+    <!--toast-->
+    <script data-require="angular-sanitize@*" data-semver="1.4.0-rc.0" src="https://code.angularjs.org/1.4.0-rc.0/angular-sanitize.js"></script>
+    <script data-require="angular-animate@*" data-semver="1.4.0-rc.0" src="https://code.angularjs.org/1.4.0-rc.0/angular-animate.js"></script>
+    <script data-require="ngToast@*" data-semver="1.5.0" src="//rawgit.com/tameraydin/ngToast/1.5.0/dist/ngToast.js"></script>
+    <link data-require="ngToast@*" data-semver="1.5.0" rel="stylesheet" href="//rawgit.com/tameraydin/ngToast/1.5.0/dist/ngToast.css" />
+    <link data-require="ngToast@*" data-semver="1.5.0" rel="stylesheet" href="//rawgit.com/tameraydin/ngToast/1.5.0/dist/ngToast-animations.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="app/lib/angular-busy.css">
+    <link rel="stylesheet" href="app/style/style.css">
+    <script src="app/lib/angular-busy.js"></script>
+    <link rel="stylesheet" href="style4.css">
+
+    <script src="app/js/app.js"></script>
+    <script src="app/js/config.js"></script>
+    <script src="app/js/controllers/login-controller.js"></script>
+    <script src="app/js/controllers/dashboardController.js"></script>
+    <script src="app/js/factories/appFactory.js"></script>
+    <script src="app/js/factories/memberFactory.js"></script>
+    <script src="app/js/factories/bookFactory.js"></script>
+    <script src="app/js/controllers/createBookController.js"></script>
+    <script src="app/js/controllers/createMember.js"></script>
+    <script src="app/js/controllers/allMembersController.js"></script>
+    <script src="app/js/controllers/allbooksController.js"></script>
+    <script src="app/js/controllers/updateMemberCotroller.js"></script>
+    <script src="app/js/controllers/updateBookController.js"></script>
+    <script src="app/js/filters/customFilter.js"></script>
+    <script src="app/js/controllers/chartsController.js"></script>
+    <script src="app/js/directives/chartsDirective.js"></script>
+    <script src="app/js/factories/excel-factory.js"></script>
+</head>
+<body data-ng-app="myApp">
+<div><toast class="ng-toast ng-toast--top ng-toast--center"></toast></div>
+   <div data-ui-view></div>
+</body>
+</html>
