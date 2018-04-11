@@ -1,7 +1,7 @@
 {
-  "name": "Angular Library Manager",
-  "version": "0.1.0",
-  "description": "Library Manager application using Angular JS",
+  "name": "node-js-sample",
+  "version": "0.2.0",
+  "description": "A sample Node.js app using Express 4",
   "main": "index.js",
   "scripts": {
     "start": "index.html"
@@ -14,15 +14,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/venkateshkadimisetty/qwerty"
+    "url": "https://github.com/heroku/node-js-sample"
   },
   "keywords": [
-    "angular",
-    "heroku"
+    "node",
+    "heroku",
+    "express"
   ],
-  "author": "Mahesh K",
+  "author": "Mark Pundsack",
   "contributors": [
-    "Venkatesh"
+    "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com)"
   ],
   "license": "MIT"
 }
