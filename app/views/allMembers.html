@@ -1,0 +1,58 @@
+<div class="panel" style="margin: 10px; border-radius: 10px">
+    <div class="panel-default" >
+    <div cg-busy="{promise:myPromise,message:'Loading',backdrop:true}"></div>
+    <div  class="panel-heading">
+        <div class="input-group col-md-3 col-sm-10" style="margin: 10px; border-radius: 10px ">
+            <input type="text" class="form-control"  ng-model="searchText" placeholder="search">
+            <div class="input-group-addon">
+                <i class="fa fa-search"></i>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div style="margin: 10px">
+            View <select ng-model="viewby" ng-change="setItemsPerPage(viewby)"><option>3</option><option>5</option><option>10</option><option>20</option><option>30</option><option>40</option><option>50</option></select> records at a time.
+        </div>
+        <button class="btn btn-link" ng-click="exportToExcel('#table1')">
+            <span class="glyphicon glyphicon-share"></span> Export to Excel
+        </button>
+        <div class="table-responsive table-striped table-hover ">
+            <table class="table table-bordered table-striped  table-condensed table-hover table-responsive" id="table1">
+                <thead>
+                <tr style="width: 50px">
+                    <th ng-click="sort_by('memberId')">Member ID&nbsp;<i class="glyphicon pull-right" ng-class="getIcon('memberId')"></i></th>
+                    <th ng-click="sort_by('firstName')">First Name&nbsp;<i class="glyphicon pull-right" ng-class="getIcon('firstName')"></i></th>
+                    <th ng-click="sort_by('lastName')">Last Name<i class="glyphicon pull-right" ng-class="getIcon('lastName')"></i></th>
+                    <th ng-click="sort_by('pin')">Roll Number&nbsp;<i class="glyphicon pull-right" ng-class="getIcon('pin')"></i></th>
+                    <th ng-click="sort_by('joinDate')">Join Date&nbsp;<i class="glyphicon pull-right" ng-class="getIcon('joinDate')"></i></th>
+                    <th ng-click="sort_by('email')">Email&nbsp;<i class="glyphicon pull-right" ng-class="getIcon('email')"></i></th>
+                    <th ng-click="sort_by('gender')">Gender&nbsp;<i class="glyphicon pull-right" ng-class="getIcon('gender')"></i></th>
+                    <th ng-click="sort_by('department')">Deparment&nbsp;<i class="glyphicon pull-right" ng-class="getIcon('department')"></i></th>
+                    <th ng-click="sort_by('memberType')">Member Type&nbsp;<i class="glyphicon pull-right" ng-class="getIcon('memberType')"></i></th>
+                    <th></th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr ng-repeat="member in totalMembers.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage)) | orderBy:sort.active:sort.descending | filter: searchText">
+                <!--<tr ng-repeat="member in totalMembers| orderBy:filterType | filter: searchText">-->
+                    <td>{{member.memberId}}</td>
+                    <td>{{member.firstName | capitalize}}</td>
+                    <td>{{member.lastName  | capitalize}}</td>
+                    <td>{{member.pin}}</td>
+                    <td>{{member.joinDate | date:'dd MMM yyyy'}}</td>
+                    <td>{{member.email}}</td>
+                    <td>{{member.gender}}</td>
+                    <td>{{member.department}}</td>
+                    <td>{{member.memberType}}</td>
+                    <td><button class="btn btn-warning btn-sm" style="margin: 5px" ng-click='editMember(member)'>Edit</button><button class="btn btn-danger btn-sm" style="margin: 5px" ng-click='delete(member)'>Delete</button></td>
+                </tr>
+                </tbody>
+            </table>
+            <div colspan="10" class="pagination pull-right">
+                <ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" items-per-page="itemsPerPage"></ul>
+            </div>
+        </div>
+   </div>
+ </div>
+</div>

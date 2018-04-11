@@ -1,0 +1,49 @@
+<div class="panel panel-default" style="margin: 20px; margin-top: 60px">
+    <div class="panel-body" style="margin-bottom: 50px">
+        <div class="col-md-12 col-sm-12">
+            <div class="col-md-3 col-sm-11 col-sm-offset-1 col-md-offset-1">
+                <div class="select">
+                    <h3 style="padding-left: 10px;">Get Details by Student ID</h3><br>
+                    <a ui-sref="getStudentDetails"></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-11 col-sm-offset-1 col-md-offset-3">
+                <div class="select">
+                    <h3 style="padding-left: 10px;">Get Details by Book ID</h3><br>
+                    <a ui-sref="getBookId"></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12">
+            <div class="col-md-3 col-sm-11 col-sm-offset-1 col-md-offset-1" >
+                <div class="select">
+                    <h3 style="padding-left: 10px;" >Issue a Book</h3><br>
+                    <a ui-sref="issueBook"></a>
+                </div>
+
+            </div>
+            <div class="col-md-3 col-sm-11 col-sm-offset-1 col-md-offset-3">
+                <div class="select">
+                    <h3 style="padding-left: 10px;">Return a book</h3><br>
+                    <a ui-sref="returnBook"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .select {
+        height: 150px;
+        padding:10px;
+        margin-top: 60px;
+        text-align: center;
+        border-radius: 10px;
+        background-color: rgba(51, 122, 183, 0.5);
+    }
+    .select>h3{
+        color: white;
+    }
+    .select:hover{
+        box-shadow: 0px 0px 10px 5px #00BFFF;
+    }
+</style>
