@@ -1,7 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f62c145-cf53-4292-bba8-fe5b22cc1b76" name="Default" comment="" />
+    <list default="true" id="5f62c145-cf53-4292-bba8-fe5b22cc1b76" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Procfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-busy.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/toast message tick.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/controllers/allMembersController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/controllers/allbooksController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/controllers/chartsController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/controllers/createBookController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/controllers/createMember.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/controllers/dashboardController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/controllers/login-controller.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/controllers/updateBookController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/controllers/updateMemberCotroller.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/directives/chartsDirective.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/factories/appFactory.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/factories/bookFactory.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/factories/excel-factory.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/factories/memberFactory.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/filters/customFilter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/lib/angular-busy.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/lib/angular-busy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/style/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/admin-dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/all.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/allBooks.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/allMembers.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/charts.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/createBook.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/createMember.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/editBook.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/editMember.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/home.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/issueBook.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/login.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/index.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/style4.css" afterPath="$PROJECT_DIR$/public/style4.css" />
+    </list>
     <ignored path="Angular-Library-Management.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -23,107 +64,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="updateMemberCotroller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/js/controllers/updateMemberCotroller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="21" selection-end-column="6" />
-              <folding>
-                <element signature="e#0#44#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="excel-factory.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/js/factories/excel-factory.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#45#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editMember.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/editMember.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2750">
-              <caret line="125" column="77" selection-start-line="125" selection-start-column="77" selection-end-line="125" selection-end-column="85" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="updateBookController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/js/controllers/updateBookController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="3" column="87" selection-start-line="3" selection-start-column="87" selection-end-line="3" selection-end-column="87" />
-              <folding>
-                <element signature="e#0#44#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1100">
-              <caret line="50" column="52" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="issueBook.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/issueBook.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editBook.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/editBook.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1672">
-              <caret line="76" column="83" selection-start-line="76" selection-start-column="77" selection-end-line="76" selection-end-column="83" />
               <folding />
             </state>
           </provider>
@@ -257,16 +202,17 @@
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\mahesh work\Angular-Library-Management" />
-      <recent name="F:\mahesh work\Angular-Library-Management\app\lib" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\mahesh work\Angular-Library-Management\app\style" />
       <recent name="F:\mahesh work\Angular-Library-Management\app\images" />
       <recent name="G:\Angular-Library-Management\app\style" />
       <recent name="G:\Angular-Library-Management\app\views" />
       <recent name="G:\Angular-Library-Management\app\js\controllers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\mahesh work\Angular-Library-Management\public" />
+      <recent name="F:\mahesh work\Angular-Library-Management" />
+      <recent name="F:\mahesh work\Angular-Library-Management\app\lib" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
@@ -382,20 +328,21 @@
       <workItem from="1523289487831" duration="3118000" />
       <workItem from="1523324696929" duration="3255000" />
       <workItem from="1523412352075" duration="1471000" />
-      <workItem from="1523464780888" duration="487000" />
+      <workItem from="1523464780888" duration="708000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172194000" />
+    <option name="totallyTimeSpent" value="172415000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="11" y="1" width="1934" height="1036" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16753654" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16753654" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -406,7 +353,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -445,7 +391,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/style4.css" />
+    <entry file="file://$PROJECT_DIR$/public/style4.css" />
     <entry file="file://$PROJECT_DIR$/app/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -650,10 +596,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style4.css">
+    <entry file="file://$PROJECT_DIR$/public/style4.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="790">
           <caret line="257" column="0" selection-start-line="257" selection-start-column="0" selection-end-line="257" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -683,9 +630,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -701,9 +646,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="21" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -711,9 +654,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="3" column="87" selection-start-line="3" selection-start-column="87" selection-end-line="3" selection-end-column="87" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
