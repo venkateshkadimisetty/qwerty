@@ -1,0 +1,129 @@
+<div class="col-md-10 col-md-offset-1" style="background-color: white;padding: 40px;border-radius: 10px">
+    <form id="memberForm" name="memberForm" ng-submit="editMemberCall(memberForm.$valid)" novalidate>
+        <div class="form-group">
+            <label>Member ID:</label>
+
+            <div class="input-group ">
+                <div class="input-group-addon">
+                    <i></i>
+                </div>
+                <input type="text" name="memberid" class="form-control" ng-model="member.memberId" ng-disabled="true" required>
+            </div>
+            <!-- /.input group -->
+        </div>
+        <div class="form-group">
+            <label>First Name:</label>
+
+            <div class="input-group ">
+                <div class="input-group-addon">
+                    <i></i>
+                </div>
+                <input type="text" name="firstName" class="form-control" ng-model="member.firstName" required>
+            </div>
+            <p ng-show="memberForm.firstName.$invalid && !memberForm.firstName.$pristine" class="help-block">First name is required.</p>
+
+            <!-- /.input group -->
+        </div>
+        <div class="form-group">
+            <label>Last Name:</label>
+
+            <div class="input-group ">
+                <div class="input-group-addon">
+                    <i></i>
+                </div>
+                <input type="text" name="lastName" class="form-control"  ng-model="member.lastName" required>
+
+            </div>
+            <p ng-show="memberForm.lastName.$invalid && !memberForm.lastName.$pristine" class="help-block">Last name is required.</p>
+            <!-- /.input group -->
+        </div>
+        <div class="form-group">
+            <label>PIN:</label>
+
+            <div class="input-group ">
+                <div class="input-group-addon">
+                    <i></i>
+                </div>
+                <input type="text" name="pin" class="form-control"  ng-model="member.pin" required>
+
+            </div>
+            <p ng-show="memberForm.pin.$invalid && !memberForm.pin.$pristine" class="help-block">PIN is required.</p>
+            <!-- /.input group -->
+        </div>
+        <div class="form-group">
+            <label> DOB:</label>
+
+            <div class="input-group ">
+                <div class="input-group-addon">
+                    <i></i>
+                </div>
+                <input type="text" name="dob" class="form-control" uib-datepicker-popup="{{format}}"  ng-model="member.dob" is-open="opened" max-date="maxDate" datepicker-options="dateOptions"  ng-required="true" close-text="Close" required />
+                <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </div>
+            <p ng-show="memberForm.dob.$invalid && !memberForm.dob.$pristine" class="help-block">DOB is required.</p>
+            <!-- /.input group -->
+        </div>
+        <div class="form-group">
+            <label>Email:</label>
+
+            <div class="input-group ">
+                <div class="input-group-addon">
+                    <i></i>
+                </div>
+                <input type="email" name="email" class="form-control" ng-model="member.email" required>
+
+            </div>
+            <p ng-show="memberForm.email.$invalid && !memberForm.email.$pristine" class="help-block">Email is required.</p>
+            <!-- /.input group -->
+        </div>
+        <div class="form-group">
+            <label>Gender:</label>
+
+            <div class="input-group ">
+                <label class="radio-inline">
+                    <input type="radio" name="gender" checked="checked" ng-model="member.gender" value="Male" required> Male
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="gender"  ng-model="member.gender" value="Female" required> Female
+                </label>
+            </div>
+            <p ng-show="memberForm.gender.$invalid && !memberForm.gender.$pristine" class="help-block">Select Gender.</p>
+            <!-- /.input group -->
+        </div>
+        <div class="form-group">
+            <label>Department:</label>
+
+            <div class="input-group ">
+                <div class="input-group-addon">
+                    <i></i>
+                </div>
+                <input type="text" name="department" class="form-control"  ng-model="member.department" required>
+
+            </div>
+            <p ng-show="memberForm.department.$invalid && !memberForm.department.$pristine" class="help-block">Department is required.</p>
+            <!-- /.input group -->
+        </div>
+        <div class="form-group">
+            <label>Member Type:</label>
+
+            <div class="input-group ">
+                <label class="radio-inline">
+                    <input type="radio" name="membertype" checked="checked" value="Student"  ng-model="member.membertype" required> Student
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="membertype" value="Faculty" ng-model="member.membertype" > Facaulty
+                </label>
+            </div>
+            <p ng-show="memberForm.membertype.$invalid && !memberForm.membertype.$pristine" class="help-block">Select Member Type.</p>
+            <!-- /.input group -->
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-block btn-success" ng-disabled="memberForm.$invalid">Update</button>
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-block btn-danger" ng-click="cancel()">Cancel</button>
+        </div>
+    </form>
+</div>
