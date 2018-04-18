@@ -34,14 +34,10 @@
                     <td><button class="btn btn-warning btn-sm" style="margin: 5px" ng-click='editBook(book)'>Edit</button><button class="btn btn-danger btn-sm" style="margin: 5px" ng-click='delete(book)'>Delete</button></td>
                 </tr>
                 </tbody>
-                <tfoot>
-                <td colspan="6">
-                    <div class="pagination pull-right">
-                        <ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" items-per-page="itemsPerPage"></ul>
-                    </div>
-                </td>
-                </tfoot>
             </table>
+            <div colspan="10" class="pagination pull-right">
+                <ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" items-per-page="itemsPerPage"></ul>
+            </div>
         </div>
     </div>
 </div>

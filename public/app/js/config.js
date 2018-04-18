@@ -3,6 +3,11 @@
  */
 app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider){
 
+        /*$httpProvider.defaults.headers.common = {};
+        $httpProvider.defaults.headers.post = {};
+        $httpProvider.defaults.headers.put = {};
+        $httpProvider.defaults.headers.patch = {};*/
+
     $urlRouterProvider.otherwise('/login'),
 
         $stateProvider
@@ -45,6 +50,11 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $http
                 url: '/charts',
                 templateUrl: 'app/views/charts.html',
                 controller: 'chartsCtrl'
+            })
+            .state('dashboard.issueBook', {
+                url: '/issueBook',
+                templateUrl: 'app/views/issueBook.html',
+                controller: 'issueBookCtrl'
             });
 
 

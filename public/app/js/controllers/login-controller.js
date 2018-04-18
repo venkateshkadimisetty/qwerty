@@ -26,6 +26,9 @@ app.controller('LoginCtrl',['$scope','$state','$http','$cookieStore','appFactory
             console.log(response);
             appFactory.toast('login sucessfully', 'success');
             $cookieStore.put('token', response.data.token);
+            $cookieStore.put('username', response.data.user.username);
+            $cookieStore.put('email', response.data.user.email);
+            $cookieStore.put('role', response.data.user.role);
             $state.go("dashboard.jobs");
         }, function (error) {
             appFactory.toast("Invalid Username/Password", "danger");

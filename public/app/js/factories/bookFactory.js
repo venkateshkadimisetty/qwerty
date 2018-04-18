@@ -45,5 +45,23 @@ app.factory('bookfactory',function ($http,$cookieStore) {
             return error;
         });
     }
+    bookser.fetchBook=function (bookId) {
+        return $http.post('https://lbmanager-node.herokuapp.com/api/book/fetch',{bookId:bookId}).then(function (response) {
+            console.log(response);
+            return response;
+        }, function (error) {
+            alert("Fetching data failed!!!");
+            return error;
+        });
+    }
+    bookser.issueBook=function (issueobj) {
+        return $http.post('https://lbmanager-node.herokuapp.com/api/bookIssue/issueBook',issueobj).then(function (response) {
+            console.log(response);
+            return response;
+        }, function (error) {
+            alert("Fetching data failed!!!");
+            return error;
+        });
+    }
     return bookser;
 });

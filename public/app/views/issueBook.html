@@ -1,12 +1,87 @@
-<div class="col-md-12">
-    <div class="col-md-3">
-        <label>Book Id</label>
-        <input type="text" ng-model="bookId()"/>
+<div class="row">
+    <div cg-busy="{promise:myPromise,message:'Loading',backdrop:true}"></div>
+    <div class="col-md-5 col-md-offset-1" style="text-align: center; width: 100%">
+        <toaster-container  style="width: 100%; padding: 10px; text-align: center; " toaster-options="{'close-button':false, 'time-out':{ 'toast-warning': 2000, 'toast-error': 0 } }"></toaster-container>
     </div>
-</div>
-<div class="col-md-12">
-    <div class="col-md-3">
-        <label>Book Name</label>
-        <input type="text" ng-model="bookName()"/>
+    <div class="panel panel-default" style="margin: 50px; margin-top: 20px; min-height: 600px">
+        <div class="panel-body">
+            <div class="col-md-6 col-md-offset-1" style="margin-top: 20px">
+                <form name="issueBookForm" id="issueBookForm" ng-submit="issueBook(issueBookForm.$valid)" novalidate>
+                    <div class="form-group">
+                        <label>Member ID:</label>
+                        <div class="input-group ">
+                            <div class="input-group-addon">
+                                <i></i>
+                            </div>
+                            <input type="text" name="memberId" class="form-control" ng-blur="fetchMember(issueBookobj.memberId)" ng-model="issueBookobj.memberId" required>
+                        </div>
+                        <p ng-show="issueBookForm.memberId.$invalid && !issueBookForm.memberId.$pristine" class="help-block">member ID is required.</p>
+                        <p ng-show="booklimit" class="help-block">Member Exceeded Book Limit.</p>
+                        <!-- /.input group -->
+                    </div>
+                    <div class="form-group">
+                        <label>Member Name:</label>
+                        <div class="input-group ">
+                            <div class="input-group-addon">
+                                <i></i>
+                            </div>
+                            <input type="text" name="memberName" class="form-control"  ng-model="fechMemobj.firstName" readonly>
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                    <div class="form-group">
+                        <label>Book ID:</label>
+                        <div class="input-group ">
+                            <div class="input-group-addon">
+                                <i></i>
+                            </div>
+                            <input type="text" name="bookId" class="form-control" ng-blur="fetchBook(issueBookobj.bookId)" ng-model="issueBookobj.bookId" ng-disabled="bookid" required>
+
+                        </div>
+                        <p ng-show="issueBookForm.bookId.$invalid && !issueBookForm.bookId.$pristine" class="help-block">Book ID is required.</p>
+                        <!-- /.input group -->
+                    </div>
+                    <div class="form-group">
+                        <label>Book Name:</label>
+                        <div class="input-group ">
+                            <div class="input-group-addon">
+                                <i></i>
+                            </div>
+                            <input type="text" name="bookName" class="form-control"  ng-model="fechBookobj.bookName" readonly>
+
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                    <div class="form-group">
+                        <label>Issue Date:</label>
+
+                        <div class="input-group ">
+                            <div class="input-group-addon">
+                                <i></i>
+                            </div>
+                            <input type="text" name="issue-date" ng-model="issueBookobj.issueDate" class="form-control" readonly>
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                    <div class="form-group">
+                        <label>Return Date:</label>
+
+                        <div class="input-group ">
+                            <div class="input-group-addon">
+                                <i></i>
+                            </div>
+                            <input type="text" name="return-date" ng-model="issueBookobj.returnDate" class="form-control" readonly>
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-block btn-success" ng-disabled="issueBookForm.$invalid">Submit</button>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-block btn-danger"ng-click="cancel()" >Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
