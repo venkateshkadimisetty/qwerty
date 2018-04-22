@@ -51,6 +51,11 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $http
                 templateUrl: 'app/views/charts.html',
                 controller: 'chartsCtrl'
             })
+            .state('dashboard.viewMember', {
+                url: '/viewMember',
+                templateUrl: 'app/views/viewMember.html',
+                controller: 'viewMemberCtrl'
+            })
             .state('dashboard.issueBook', {
                 url: '/issueBook',
                 templateUrl: 'app/views/issueBook.html',
@@ -62,7 +67,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $http
     /*.state('admin.createBookCtrlcreateBookCtrl', {
      url: '/offers',
      views: {
-     '@admin': {
+     '@admin': {viewMemberCtrl
      templateUrl: 'views/offers.html',
      controller: 'allBooksCtrl'
      }

@@ -59,5 +59,4 @@ app.factory('memberfactory',function ($http,$cookieStore) {
         });
     }
     return memSer;
-
 });

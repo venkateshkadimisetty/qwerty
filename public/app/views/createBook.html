@@ -44,6 +44,18 @@
                             <!-- /.input group -->
                         </div>
                         <div class="form-group">
+                            <label>Number Copies:</label>
+
+                            <div class="input-group ">
+                                <div class="input-group-addon">
+                                    <i></i>
+                                </div>
+                                <input type="text" name="department" class="form-control" ng-model="book.numberOfCopies" required>
+                            </div>
+                            <p ng-show="bookForm.numberOfCopies.$invalid && !bookForm.numberOfCopies.$pristine" class="help-block">Number Copies is required.</p>
+                            <!-- /.input group -->
+                        </div>
+                        <div class="form-group">
                             <button type="submit" class="btn btn-block btn-success" ng-disabled="bookForm.$invalid">Submit</button>
                         </div>
                         <div class="form-group">
