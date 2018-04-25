@@ -23,6 +23,10 @@ app.controller('viewMemberCtrl',['$scope','$state','$cookieStore','memberfactory
                 }
             });
     };
+    $scope.back=function(fechMemobj){
+    
+        $scope.fetchMember;
+    }
     $scope.editMember=function (fechMemobj) {
         $scope.edit=false;
 
