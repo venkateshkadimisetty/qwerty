@@ -7,92 +7,67 @@
         <div  class="panel-heading">
             <div class="input-group col-md-3 col-sm-10" style="margin: 10px; border-radius: 10px ">
                 <div class="form-group">
-                    <label>Enter Member ID to Search:</label>
+                    <label>Enter Book ID to Search:</label>
                     <div class="input-group ">
-                        <input type="text" name="memberId" class="form-control" ng-model="memberId" required>
+                        <input type="text" name="bookId" class="form-control" ng-model="bookId" required>
                         <div class="input-group-addon">
-                            <i class=" fa fa-search"  ng-click="fetchMember(memberId)"></i>
+                            <i class=" fa fa-search"  ng-click="fetchBook(bookId)"></i>
                         </div>
                     </div>
-                    <p ng-show="memberId.$invalid && !memberId.$pristine" class="help-block">member ID is required.</p>
+                    <p ng-show="memberId.$invalid && !memberId.$pristine" class="help-block">Book ID is required.</p>
                     <!-- /.input group -->
                 </div>
             </div>
         </div>
-        <div class="panel-body" ng-hide="memberdata">
-            <div class="col-md-9 col-md-offset-1 col-sm-11" style="margin-top: 20px">
-                <table class="table-responsive" style="border: none">
-                    <strong class="memberlist"><h3>Member Information</h3></strong><br>
-                    <button class="btn btn-warning btn-sm pull-right" style="margin: 5px" ng-click='editMember(fechMemobj)' ng-if="edit">Edit</button>
-                    <button class="btn btn-warning btn-sm pull-right" style="margin: 5px" ng-click='updateMember(fechMemobj)' ng-if="!edit">Update</button>
+        <div class="panel-body" ng-hide="bookdata">
+            <div class="col-md-6 col-md-offset-1 col-sm-11" style="margin-top: 20px">
+                <table class=" table-responsive" style="border: none">
+                    <strong class="memberlist"><h3>Book Information</h3></strong><br>
                     <tbody>
                     <tr class="memberlist">
                         <td><strong>Member Name </strong></td>
                         <td><strong></strong>:</strong></td>
-                        <td><span ng-if="edit">{{fechMemobj.firstName}}</span>
-                            <span ng-if="!edit"><input type="text" name="memberName" class="form-control"  ng-model="fechMemobj.firstName"></span>
-                        </td>
+                        <td>{{fechMemobj.firstName}}</td>
                     </tr>
                     <tr class="memberlist">
                         <td><strong>Pin</strong></td>
                         <td><strong></strong>:</strong></td>
-                        <td><span ng-if="edit">{{fechMemobj.pin}}</span>
-                            <span ng-if="!edit"><input type="text" name="pin" class="form-control"  ng-model="fechMemobj.pin"></span>
-                        </td>
+                        <td>{{fechMemobj.pin}}</td>
                     </tr>
                     <tr class="memberlist">
                         <td><strong>Gender</strong></td>
                         <td><strong></strong>:</strong></td>
-                        <td><span ng-if="edit">{{fechMemobj.gender}}</span>
-                            <span ng-if="!edit"> <label class="radio-inline">
-                                <input type="radio" name="gender" checked="checked" ng-model="fechMemobj.gender" value="Male" required> Male
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="gender"  ng-model="fechMemobj.gender" value="Female" required> Female
-                            </label></span>
-                        </td>
+                        <td>{{fechMemobj.gender}}</td>
                     </tr>
                     <tr class="memberlist">
                         <td><strong>Dob</strong></td>
                         <td><strong></strong>:</strong></td>
-                        <td><span ng-if="edit">{{fechMemobj.dob | date:'dd MMM yyyy'}}</span>
-                            <span ng-if="!edit"><input type="date" name="date" class="form-control"  ng-model="fechMemobj.date"></span>
-                        </td>
+                        <td>{{fechMemobj.dob | date:'dd MMM yyyy'}}</td>
                     </tr>
                     <tr class="memberlist">
                         <td><strong>Email</strong></td>
                         <td><strong></strong>:</strong></td>
-                        <td><span ng-if="edit">{{fechMemobj.email}}</span>
-                            <span ng-if="!edit"><input type="email" name="email" class="form-control"  ng-model="fechMemobj.email"></span>
-                        </td>
+                        <td>{{fechMemobj.email}}</td>
                     </tr>
                     <tr class="memberlist">
                         <td><strong>Department</strong></td>
                         <td><strong></strong>:</strong></td>
-                        <td><span ng-if="edit">{{fechMemobj.department}}</span>
-                            <span ng-if="!edit"><input type="text" name="department" class="form-control"  ng-model="fechMemobj.department"></span>
-                        </td>
+                        <td>{{fechMemobj.department}}</td>
                     </tr>
                     <tr class="memberlist">
                         <td><strong>JoinDate</strong></td>
                         <td><strong></strong>:</strong></td>
-                        <td><span ng-if="edit">{{fechMemobj.joinDate | date:'dd MMM yyyy'}}</span>
-                            <span ng-if="!edit"><input type="date" name="Join date" class="form-control"  ng-model="fechMemobj.joinDate"></span>
-                        </td>
+                        <td>{{fechMemobj.joinDate | date:'dd MMM yyyy'}}</td>
                     </tr>
                     <tr class="memberlist">
                         <td><strong>Fine</strong></td>
                         <td><strong></strong>:</strong></td>
-                        <td><span ng-if="edit">{{fechMemobj.fine}}</span>
-                            <span ng-if="!edit"><input type="text" name="Fine" class="form-control"  ng-model="fechMemobj.fine"></span>
-                        </td>
+                        <td>{{fechMemobj.fine}}</td>
                     </tr>
                     <tr class="memberlist">
                         <td><strong>Book Limit</strong></td>
                         <td><strong></strong>:</strong></td>
-                        <td><span ng-if="edit">{{fechMemobj.bookLimit}}</span>
-                            <span ng-if="!edit"><input type="text" name="BookLimit" class="form-control"  ng-model="fechMemobj.bookLimit"></span>
-                        </td>
+                        <td>{{fechMemobj.bookLimit}}</td>
                     </tr>
                     </tbody>
                 </table>

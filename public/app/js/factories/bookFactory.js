@@ -37,7 +37,8 @@ app.factory('bookfactory',function ($http,$cookieStore) {
         });
     }
     bookser.getAllBooks=function () {
-        return $http.get('https://lbmanager-node.herokuapp.com/api/book/listAllBooks').then(function (response) {
+        var token=$cookieStore.get('token');
+        return $http.get('https://lbmanager-node.herokuapp.com/api/book/listAllBooks',{headers:{'x-access-token':token,'Content-Type':'Application/json'}}).then(function (response) {
             console.log(response);
             return response;
         }, function (error) {
@@ -46,7 +47,8 @@ app.factory('bookfactory',function ($http,$cookieStore) {
         });
     }
     bookser.fetchBook=function (bookId) {
-        return $http.post('https://lbmanager-node.herokuapp.com/api/book/fetch',{bookId:bookId}).then(function (response) {
+        var token=$cookieStore.get('token');
+        return $http.post('https://lbmanager-node.herokuapp.com/api/book/fetch',{bookId:bookId},{headers:{'x-access-token':token,'Content-Type':'Application/json'}}).then(function (response) {
             console.log(response);
             return response;
         }, function (error) {
@@ -55,7 +57,8 @@ app.factory('bookfactory',function ($http,$cookieStore) {
         });
     }
     bookser.issueBook=function (issueobj) {
-        return $http.post('https://lbmanager-node.herokuapp.com/api/bookIssue/issueBook',issueobj).then(function (response) {
+        var token=$cookieStore.get('token');
+        return $http.post('https://lbmanager-node.herokuapp.com/api/bookIssue/issueBook',issueobj,{headers:{'x-access-token':token,'Content-Type':'Application/json'}}).then(function (response) {
             console.log(response);
             return response;
         }, function (error) {
