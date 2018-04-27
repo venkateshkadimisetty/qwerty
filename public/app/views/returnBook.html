@@ -1,0 +1,63 @@
+<div class="row">
+    <div cg-busy="{promise:myPromise,message:'Loading',backdrop:true}"></div>
+    <div class="col-md-5 col-md-offset-1" style="text-align: center; width: 100%">
+        <toaster-container  style="width: 100%; padding: 10px; text-align: center; " toaster-options="{'close-button':false, 'time-out':{ 'toast-warning': 2000, 'toast-error': 0 } }"></toaster-container>
+    </div>
+    <div class="panel panel-default" style="margin: 50px; margin-top: 20px; min-height: 600px">
+        <div  class="panel-heading">
+            <div class="input-group col-md-3 col-sm-10" style="margin: 10px; border-radius: 10px ">
+                <div class="form-group">
+                    <label>Enter Return Book ID to Search:</label>
+                    <div class="input-group ">
+                        <input type="text" name="bookIssueId" class="form-control" ng-model="bookIssueId" required>
+                        <div class="input-group-addon">
+                            <i class=" fa fa-search"  ng-click="fetchIssueBook(bookIssueId)"></i>
+                        </div>
+                    </div>
+                    <p ng-show="bookIssueId.$invalid && !bookIssueId.$pristine" class="help-block">Book issue ID is required.</p>
+                    <!-- /.input group -->
+                </div>
+            </div>
+        </div>
+        <div class="panel-body" ng-hide="bookissuedata">
+            <div class="col-md-9 col-md-offset-1 col-sm-11" style="margin-top: 20px">
+                <table class="table-responsive" style="border: none">
+                    <strong class="memberlist"><h3>Book Information</h3></strong><br>
+                    <button class="btn btn-danger btn-sm pull-right" style="margin: 5px" ng-click='returnBook(bookIssueId)'>Return Book</button>
+                    <tbody>
+                    <tr class="memberlist">
+                        <td><strong>Member ID </strong></td>
+                        <td><strong></strong>&nbsp;:&nbsp;</strong></td>
+                        <td>{{fechIssueBookobj.memberId}}</td>
+                    </tr>
+                    <tr class="memberlist">
+                        <td><strong>Member Name </strong></td>
+                        <td><strong></strong>&nbsp;:&nbsp;</strong></td>
+                        <td>{{fechIssueBookobj.memberName}}</td>
+                    </tr>
+                    <tr class="memberlist">
+                        <td><strong>Book ID </strong></td>
+                        <td><strong></strong>&nbsp;:&nbsp;</strong></td>
+                        <td>{{fechIssueBookobj.bookId}}</td>
+                    </tr>
+                    <tr class="memberlist">
+                        <td><strong>Book Name </strong></td>
+                        <td><strong></strong>&nbsp;:&nbsp;</strong></td>
+                        <td>{{fechIssueBookobj.bookName}}</td>
+                    </tr>
+                    <tr class="memberlist">
+                        <td><strong>Issue Date</strong></td>
+                        <td><strong></strong>&nbsp;:&nbsp;</strong></td>
+                        <td>{{fechIssueBookobj.issueDate | date:'dd MMM yyyy'}}</td>
+                    </tr>
+                    <tr class="memberlist">
+                        <td><strong>Return Date</strong></td>
+                        <td><strong></strong>&nbsp;:&nbsp;</strong></td>
+                        <td>{{fechIssueBookobj.returnDate | date:'dd MMM yyyy'}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -33,6 +33,8 @@ app.controller('allBooksCtrl',['$scope','$state','$http','$cookieStore','bookfac
         $scope.filterType=type;
     }*/
     $scope.editBook=function (book) {
+        var copiedBook={};
+        angular.copy(book,copiedBook);
         $scope.message = "Show Form Button Clicked";
         console.log($scope.message);
 
@@ -40,7 +42,7 @@ app.controller('allBooksCtrl',['$scope','$state','$http','$cookieStore','bookfac
             templateUrl: 'app/views/editBook.html',
             controller: 'ModalInstanceBookCtrl',
             resolve: {
-                editBook:book
+                editBook:copiedBook
             }
         });
         modalInstance.result.then(function (selectedItem) {

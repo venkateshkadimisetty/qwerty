@@ -48,7 +48,7 @@ app.controller('issueBookCtrl',['$scope','$state','$cookieStore','memberfactory'
     $scope.cancel=function () {
         $state.go('dashboard.jobs');
     }
-    init=function () {
+    function init() {
         $scope.issueBookobj.issueDate=new Date();
         $scope.issueBookobj.returnDate=new Date();
         $scope.issueBookobj.returnDate.setDate($scope.issueBookobj.returnDate.getDate() + 15);

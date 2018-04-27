@@ -59,7 +59,7 @@
                             <div class="input-group-addon">
                                 <i></i>
                             </div>
-                            <input type="text" name="issue-date" ng-model="issueBookobj.issueDate" class="form-control" readonly>
+                            <input type="text" name="issue-date" ng-model="issueBookobj.issueDate | date :  'dd MMM yyyy'" class="form-control" readonly>
                         </div>
                         <!-- /.input group -->
                     </div>
@@ -70,7 +70,7 @@
                             <div class="input-group-addon">
                                 <i></i>
                             </div>
-                            <input type="text" name="return-date" ng-model="issueBookobj.returnDate" class="form-control" readonly>
+                            <input type="text" name="return-date" ng-model="issueBookobj.returnDate | date :  'dd MMM yyyy'" class="form-control" readonly>
                         </div>
                         <!-- /.input group -->
                     </div>

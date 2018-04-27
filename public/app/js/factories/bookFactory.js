@@ -66,5 +66,25 @@ app.factory('bookfactory',function ($http,$cookieStore) {
             return error;
         });
     }
+    bookser.fetchIssueBook=function (bookIssueId) {
+        var token=$cookieStore.get('token');
+        return $http.post('https://lbmanager-node.herokuapp.com/api/bookIssue/fetchIssueBookDetails',{bookIssueId:bookIssueId},{headers:{'x-access-token':token,'Content-Type':'Application/json'}}).then(function (response) {
+            console.log(response);
+            return response;
+        }, function (error) {
+            alert("Fetching data failed!!!");
+            return error;
+        });
+    }
+    bookser.returnIssueBook=function (bookIssueId) {
+        var token=$cookieStore.get('token');
+        return $http.post('https://lbmanager-node.herokuapp.com/bookIssue/collectBook',bookIssueId,{headers:{'x-access-token':token,'Content-Type':'Application/json'}}).then(function (response) {
+            console.log(response);
+            return response;
+        }, function (error) {
+            alert("Fetching data failed!!!");
+            return error;
+        });
+    }
     return bookser;
 });

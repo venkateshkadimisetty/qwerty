@@ -23,6 +23,8 @@ app.controller('allMembersCtrl',['$scope','$state','$http','$cookieStore','membe
         $scope.currentPage = 1; //reset to first page
     }
     $scope.editMember=function (member) {
+        var copiedMember={};
+        angular.copy(member,copiedMember);
         $scope.message = "Show Form Button Clicked";
         console.log($scope.message);
 
@@ -30,7 +32,7 @@ app.controller('allMembersCtrl',['$scope','$state','$http','$cookieStore','membe
             templateUrl: 'app/views/editMember.html',
             controller: 'ModalInstanceCtrl',
             resolve: {
-                editingMember:member
+                editingMember:copiedMember
             }
         });
 

@@ -23,76 +23,82 @@
             <div class="col-md-9 col-md-offset-1 col-sm-11" style="margin-top: 20px">
                 <table class="table-responsive" style="border: none">
                     <strong class="memberlist"><h3>Member Information</h3></strong><br>
-                    <button class="btn btn-warning btn-sm pull-right" style="margin: 5px" ng-click='editMember(fechMemobj)' ng-if="edit">Edit</button>
-                    <button class="btn btn-warning btn-sm pull-right" style="margin: 5px" ng-click='updateMember(fechMemobj)' ng-if="!edit">Update</button>
+                    <button class="btn btn-danger btn-sm pull-right" style="margin: 5px" ng-click='deleteMember(fechMemobj)' ng-if="edit">Delete</button>
+                    <button class="btn btn-primary btn-sm pull-right" style="margin: 5px" ng-click='editMember(fechMemobj)' ng-if="edit">Edit</button>
                     <button class="btn btn-warning btn-sm pull-right" style="margin: 5px" ng-click='back(fechMemobj)' ng-if="!edit">Back</button>
+                    <button class="btn btn-primary btn-sm pull-right" style="margin: 5px" ng-click='updateMember()' ng-if="!edit">Update</button>
                     <tbody>
                     <tr class="memberlist">
                         <td><strong>Name </strong></td>
-                        <td><strong></strong>&nbsp;:&nbsp;</strong></td>
+                        <td><strong></strong>&nbsp;&nbsp;:&nbsp;&nbsp;</strong></td>
                         <td><span ng-if="edit">{{fechMemobj.firstName}}</span>
-                            <span ng-if="!edit"><input type="text" name="memberName" class="form-control"  ng-model="fechMemobj.firstName"></span>
+                            <span ng-if="!edit"><input type="text" name="memberName" class="form-control"  ng-model="fechMemobj1.firstName"></span>
                         </td>
                     </tr>
                     <tr class="memberlist">
                         <td><strong>Pin</strong></td>
-                        <td><strong></strong>&nbsp;:&nbsp;</strong></td>
+                        <td><strong></strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;</strong></td>
                         <td><span ng-if="edit">{{fechMemobj.pin}}</span>
-                            <span ng-if="!edit"><input type="text" name="pin" class="form-control"  ng-model="fechMemobj.pin"></span>
+                            <span ng-if="!edit"><input type="text" name="pin" class="form-control"  ng-model="fechMemobj1.pin"></span>
                         </td>
                     </tr>
                     <tr class="memberlist">
                         <td><strong>Gender</strong></td>
-                        <td><strong></strong>&nbsp;:&nbsp;</strong></td>
+                        <td><strong></strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;</strong></td>
                         <td><span ng-if="edit">{{fechMemobj.gender}}</span>
                             <span ng-if="!edit"> <label class="radio-inline">
-                                <input type="radio" name="gender" checked="checked" ng-model="fechMemobj.gender" value="Male" required> Male
+                                <input type="radio" name="gender" checked="checked" ng-model="fechMemobj1.gender" value="Male" required> Male
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" name="gender"  ng-model="fechMemobj.gender" value="Female" required> Female
+                                <input type="radio" name="gender"  ng-model="fechMemobj1.gender" value="Female" required> Female
                             </label></span>
                         </td>
                     </tr>
                     <tr class="memberlist">
                         <td><strong>DOB</strong></td>
-                        <td><strong></strong>&nbsp;:&nbsp;</strong></td>
+                        <td><strong></strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;</strong></td>
                         <td><span ng-if="edit">{{fechMemobj.dob | date:'dd MMM yyyy'}}</span>
-                            <span ng-if="!edit"><input type="date" name="date" class="form-control"  ng-model="fechMemobj.dob | date:'dd MMM yyyy'"></span>
+                            <span ng-if="!edit">
+                                <input type="text" name="dob" class="form-control" uib-datepicker-popup="{{format}}"  ng-model="fechMemobj1.dob" is-open="opened" max-date="maxDate" datepicker-options="dateOptions"  ng-required="true" close-text="Close" required />
+                            <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                            </span>
+                            </span>
                         </td>
                     </tr>
                     <tr class="memberlist">
                         <td><strong>Email ID</strong></td>
-                        <td><strong></strong>&nbsp;:&nbsp;</strong></td>
+                        <td><strong></strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;</strong></td>
                         <td><span ng-if="edit">{{fechMemobj.email}}</span>
-                            <span ng-if="!edit"><input type="email" name="email" class="form-control"  ng-model="fechMemobj.email"></span>
+                            <span ng-if="!edit"><input type="email" name="email" class="form-control"  ng-model="fechMemobj1.email"></span>
                         </td>
                     </tr>
                     <tr class="memberlist">
                         <td><strong>Department</strong></td>
-                        <td><strong></strong>&nbsp;:&nbsp;</strong></td>
+                        <td><strong></strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;</strong></td>
                         <td><span ng-if="edit">{{fechMemobj.department}}</span>
-                            <span ng-if="!edit"><input type="text" name="department" class="form-control"  ng-model="fechMemobj.department"></span>
+                            <span ng-if="!edit"><input type="text" name="department" class="form-control"  ng-model="fechMemobj1.department"></span>
                         </td>
                     </tr>
                     <tr class="memberlist">
                         <td><strong>Join Date</strong></td>
-                        <td><strong></strong>&nbsp;:&nbsp;</strong></td>
+                        <td><strong></strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;</strong></td>
                         <td><span ng-if="edit">{{fechMemobj.joinDate | date:'dd MMM yyyy'}}</span>
-                            <span ng-if="!edit"><input type="date" name="Join date" class="form-control"  ng-model="fechMemobj.joinDate | date:'dd MMM yyyy'"></span>
+                            <span ng-if="!edit">{{fechMemobj1.joinDate | date:'dd MMM yyyy'}}</span>
                         </td>
                     </tr>
                     <tr class="memberlist">
                         <td><strong>Fine</strong></td>
-                        <td><strong></strong>&nbsp;:&nbsp;</strong></td>
+                        <td><strong></strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;</strong></td>
                         <td><span ng-if="edit">{{fechMemobj.fine}}</span>
-                            <span ng-if="!edit"><input type="text" name="Fine" class="form-control"  ng-model="fechMemobj.fine"></span>
+                            <span ng-if="!edit">{{fechMemobj1.fine}}</span>
                         </td>
                     </tr>
                     <tr class="memberlist">
                         <td><strong>Book Limit</strong></td>
-                        <td><strong></strong>&nbsp;:&nbsp;</strong></td>
+                        <td><strong></strong>&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;</strong></td>
                         <td><span ng-if="edit">{{fechMemobj.bookLimit}}</span>
-                            <span ng-if="!edit"><input type="text" name="BookLimit" class="form-control"  ng-model="fechMemobj.bookLimit"></span>
+                            <span ng-if="!edit">{{fechMemobj1.bookLimit}}</span>
                         </td>
                     </tr>
                     </tbody>

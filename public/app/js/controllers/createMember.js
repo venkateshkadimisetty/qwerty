@@ -6,10 +6,13 @@ app.controller('createMemberCtrl',['$scope','$state','$http','$cookieStore','mem
     $scope.createMember=function (isValid) {
         if(isValid){
             $scope.myPromise= memberfactory.createMember($scope.member).then(function(response) {
-                console.log(response);
-                appFactory.toast('Member created with ID:'+response.data.memberId,'success');
-                $scope.member={};
-                $scope.memberForm.$setPristine();
+                if (response.status == 200) {
+                    console.log(response);
+                    appFactory.toast('Member created with ID:' + response.data.memberId, 'success');
+                    $scope.member = {};
+                    $scope.memberForm.$setPristine();
+                }
+                appFactory.toast('Invalid Member Data', 'danger');
             });
         }
     }

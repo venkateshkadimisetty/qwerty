@@ -56,10 +56,20 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $http
                 templateUrl: 'app/views/viewMember.html',
                 controller: 'viewMemberCtrl'
             })
+            .state('dashboard.viewBook', {
+                url: '/viewBook',
+                templateUrl: 'app/views/viewBook.html',
+                controller: 'viewBookCtrl'
+            })
             .state('dashboard.issueBook', {
                 url: '/issueBook',
                 templateUrl: 'app/views/issueBook.html',
                 controller: 'issueBookCtrl'
+            })
+            .state('dashboard.returnBook', {
+                url: '/returnBook',
+                templateUrl: 'app/views/returnBook.html',
+                controller: 'returnBookCtrl'
             });
 
 
