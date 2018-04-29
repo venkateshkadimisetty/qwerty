@@ -26,12 +26,12 @@ app.controller('viewBookCtrl',['$scope','$state','$cookieStore','memberfactory',
     }
     $scope.updateBook = function (fechBookobj) {
         $scope.edit=true;
-        $scope.myPromise= bookfactory.updateBook($scope.fechBookobj).then(function(response) {
+        $scope.myPromise= bookfactory.updateBook($scope.fechBookobj1).then(function(response) {
             if(response.status== 200)
             {
                 console.log(response);
                 appFactory.toast('Book updated successfully','success');
-                $scope.fetchBook;
+                $scope.fetchBook($scope.fechBookobj1.bookId);
             }
         });
     };
@@ -43,6 +43,15 @@ app.controller('viewBookCtrl',['$scope','$state','$cookieStore','memberfactory',
         angular.copy($scope.fechBookobj,$scope.fechBookobj1);
         $scope.edit=false;
 
+    }
+    $scope.delete=function (fechBookobj) {
+        if(confirm("Are you sure you want to delete this book?!")){
+            $scope.myPromise= bookfactory.deleteBook(fechBookobj).then(function(response) {
+                console.log(response);
+                appFactory.toast('Book Deleted with ID:'+fechBookobj.bookId,'success');
+                $state.go('dashboard.jobs');
+            });
+        }
     }
     $scope.cancel=function () {
         $state.go('dashboard.jobs');

@@ -36,7 +36,8 @@ app.controller('allMembersCtrl',['$scope','$state','$http','$cookieStore','membe
             }
         });
 
-        modalInstance.result.then(function (selectedItem) {
+        modalInstance.result.then(function () {
+            init();
         }, function () {
         });
     }

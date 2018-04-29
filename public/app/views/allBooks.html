@@ -19,6 +19,7 @@
                     <th class="id" ng-click="sort_by('bookId')">Book ID&nbsp;<i class="glyphicon pull-right" ng-class="getIcon('bookId')"></i></th>
                     <th class="name" ng-click="sort_by('bookName')">Book Name<i class="glyphicon pull-right" ng-class="getIcon('bookName')"></i></th>
                     <th class="description" ng-click="sort_by('department')">Deparment<i class="glyphicon pull-right" ng-class="getIcon('department')"></i></th>
+                    <th class="author" ng-click="sort_by('author')">Author<i class="glyphicon pull-right" ng-class="getIcon('author')"></i></th>
                     <th class="field3" ng-click="sort_by('availableDate')">Avaliable Date<i class="glyphicon pull-right" ng-class="getIcon('availableDate')"></i></th>
                     <th class="field4" ng-click="sort_by('isAvailable')">Available<i class="glyphicon pull-right" ng-class="getIcon('isAvailable')"></i></th>
                     <th class="field5"></th>
@@ -29,6 +30,7 @@
                     <td>{{book.bookId}}</td>
                     <td>{{book.bookName | capitalize}}</td>
                     <td>{{book.department | capitalize}}</td>
+                    <td>{{book.author | capitalize}}</td>
                     <td>{{book.availableDate | date:'dd MMM yyyy'}}</td>
                     <td>{{book.isAvailable}}</td>
                     <td><button class="btn btn-warning btn-sm" style="margin: 5px" ng-click='editBook(book)'>Edit</button><button class="btn btn-danger btn-sm" style="margin: 5px" ng-click='delete(book)'>Delete</button></td>

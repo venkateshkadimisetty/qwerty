@@ -78,7 +78,17 @@ app.factory('bookfactory',function ($http,$cookieStore) {
     }
     bookser.returnIssueBook=function (bookIssueId) {
         var token=$cookieStore.get('token');
-        return $http.post('https://lbmanager-node.herokuapp.com/bookIssue/collectBook',bookIssueId,{headers:{'x-access-token':token,'Content-Type':'Application/json'}}).then(function (response) {
+        return $http.post('https://lbmanager-node.herokuapp.com/api/bookIssue/collectBook',bookIssueId,{headers:{'x-access-token':token,'Content-Type':'Application/json'}}).then(function (response) {
+            console.log(response);
+            return response;
+        }, function (error) {
+            alert("Fetching data failed!!!");
+            return error;
+        });
+    }
+    bookser.fetchIssueBookofMember=function (memberId) {
+        var token=$cookieStore.get('token');
+        return $http.get('https://lbmanager-node.herokuapp.com/api/bookIssue/fetchIssueBookDetails/'+memberId,{headers:{'x-access-token':token,'Content-Type':'Application/json'}}).then(function (response) {
             console.log(response);
             return response;
         }, function (error) {

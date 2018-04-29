@@ -45,7 +45,8 @@ app.controller('allBooksCtrl',['$scope','$state','$http','$cookieStore','bookfac
                 editBook:copiedBook
             }
         });
-        modalInstance.result.then(function (selectedItem) {
+        modalInstance.result.then(function () {
+            init();
         }, function () {
         });
     }

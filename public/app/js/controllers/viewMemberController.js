@@ -22,7 +22,21 @@ app.controller('viewMemberCtrl',['$scope','$state','$cookieStore','memberfactory
             appFactory.toast("Invalid Member ID", "danger");
             //alert("Fetching data failed!!!");
         });
+        $scope.myPromise= bookfactory.fetchIssueBookofMember(memberId).then(function(response) {
+            if(response.status== 200)
+            {
 
+                console.log(response);
+                $scope.fechMemIssueBooks=response.data;
+            }
+            else
+            {
+                appFactory.toast("Invalid Member ID", "danger");
+            }
+        }, function (error) {
+           // appFactory.toast("Invalid Member ID", "danger");
+            //alert("Fetching data failed!!!");
+        });
     }
     $scope.updateMember = function () {
       $scope.edit=true;
@@ -45,6 +59,16 @@ app.controller('viewMemberCtrl',['$scope','$state','$cookieStore','memberfactory
         $scope.edit=false;
 
     }
+    $scope.delete=function (fechMemobj) {
+        if(confirm("Are you sure you want to delete member!"))
+        {
+            $scope.myPromise= memberfactory.deleteMember(fechMemobj).then(function(response) {
+                console.log(response);
+                appFactory.toast('Member Deleted with ID:'+fechMemobj.memberId,'success');
+                $state.go('dashboard.jobs');
+            });
+        }
+    }
     $scope.today = function() {
         $scope.dt = new Date();
     };
@@ -53,6 +77,12 @@ app.controller('viewMemberCtrl',['$scope','$state','$cookieStore','memberfactory
     $scope.clear = function () {
         $scope.dt = null;
     };
+    $scope.returnBook=function (bookIssueId) {
+       $state.go('dashboard.returnBook',{
+           bookIssueId: bookIssueId
+       })
+
+    }
 
     // Disable weekend selection
     /* $scope.disabled = function(date, mode) {

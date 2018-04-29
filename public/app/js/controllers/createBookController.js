@@ -5,10 +5,16 @@ app.controller('createBookCtrl',function($scope,$state,$http,bookfactory,appFact
     $scope.book={};
     $scope.createBook=function (isValid) {
         $scope.myPromise=bookfactory.createBook($scope.book).then(function(response) {
-            console.log(response);
-            appFactory.toast('Book created with ID:'+response.data.bookId,'success');
-            $scope.book={};
-            $scope.bookForm.$setPristine();
+            if (response.status == 200) {
+                console.log(response);
+                appFactory.toast('Book created with ID:'+response.data.bookId,'success');
+                $scope.book={};
+                $scope.bookForm.$setPristine();
+            }
+            else
+            {
+                appFactory.toast('Invalid Book Data  ','danger');
+            }
         });
     }
 

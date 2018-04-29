@@ -43,3 +43,6 @@ th{
 .memberlist{
     height: 45px;
 }
+thead{
+    background-color: #7386D5;
+}

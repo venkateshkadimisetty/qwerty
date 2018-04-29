@@ -1,9 +1,10 @@
 /**
  * Created by venkatesh on 4/27/2018.
  */
-app.controller('returnBookCtrl',['$scope','$state','$cookieStore','memberfactory','appFactory','bookfactory',function($scope,$state,$cookieStore,memberfactory,appFactory,bookfactory) {
+app.controller('returnBookCtrl',['$scope','$state','$cookieStore','$stateParams','memberfactory','appFactory','bookfactory',function($scope,$state,$cookieStore,$stateParams,memberfactory,appFactory,bookfactory) {
     $scope.bookissuedata=true;
     $scope.fechIssueBookobj={};
+    $scope.bookIssueId=$stateParams.bookIssueId;
     $scope.fetchIssueBook=function (bookIssueId) {
         $scope.myPromise= bookfactory.fetchIssueBook(bookIssueId).then(function(response) {
             if(response.status== 200)
@@ -29,7 +30,14 @@ app.controller('returnBookCtrl',['$scope','$state','$cookieStore','memberfactory
             {
                 console.log(response);
                 appFactory.toast('BooK Reterned successfully','success');
+                $state.go('dashboard.jobs');
             }
         });
     };
+    function init(){
+        if($scope.bookIssueId!=null){
+            $scope.fetchIssueBook($scope.bookIssueId);
+        }
+    }
+    init();
 }]);

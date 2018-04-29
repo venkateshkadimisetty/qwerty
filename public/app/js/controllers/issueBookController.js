@@ -42,6 +42,7 @@ app.controller('issueBookCtrl',['$scope','$state','$cookieStore','memberfactory'
             $scope.myPromise= bookfactory.issueBook($scope.issueobj).then(function(response) {
                 console.log(response);
                 appFactory.toast('Book Issued sucessfully', 'success');
+                $state.go('dashboard.jobs');
             });
         }
     }

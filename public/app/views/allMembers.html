@@ -28,7 +28,9 @@
                     <th ng-click="sort_by('email')">Email&nbsp;<i class="glyphicon pull-right" ng-class="getIcon('email')"></i></th>
                     <th ng-click="sort_by('gender')">Gender&nbsp;<i class="glyphicon pull-right" ng-class="getIcon('gender')"></i></th>
                     <th ng-click="sort_by('department')">Deparment&nbsp;<i class="glyphicon pull-right" ng-class="getIcon('department')"></i></th>
-                    <th ng-click="sort_by('memberType')">Member Type&nbsp;<i class="glyphicon pull-right" ng-class="getIcon('memberType')"></i></th>
+                    <th ng-click="sort_by('bookLimit')">No Of Books&nbsp;<i class="glyphicon pull-right" ng-class="getIcon('bookLimit')"></i></th>
+                    <th ng-click="sort_by('fine')">Fine&nbsp;<i class="glyphicon pull-right" ng-class="getIcon('fine')"></i></th>
+                    <th ng-click="sort_by('membertype')">Member Type&nbsp;<i class="glyphicon pull-right" ng-class="getIcon('membertype')"></i></th>
                     <th></th>
                 </tr>
                 </thead>
@@ -44,7 +46,9 @@
                     <td>{{member.email}}</td>
                     <td>{{member.gender}}</td>
                     <td>{{member.department}}</td>
-                    <td>{{member.memberType}}</td>
+                    <td>{{3-member.bookLimit}}</td>
+                    <td>{{member.fine}}</td>
+                    <td>{{member.membertype}}</td>
                     <td><button class="btn btn-warning btn-sm" style="margin: 5px" ng-click='editMember(member)'>Edit</button><button class="btn btn-danger btn-sm" style="margin: 5px" ng-click='delete(member)'>Delete</button></td>
                 </tr>
                 </tbody>

@@ -12,7 +12,10 @@ app.controller('createMemberCtrl',['$scope','$state','$http','$cookieStore','mem
                     $scope.member = {};
                     $scope.memberForm.$setPristine();
                 }
-                appFactory.toast('Invalid Member Data', 'danger');
+                else
+                {
+                    appFactory.toast('Invalid Member Data', 'danger');
+                }
             });
         }
     }
