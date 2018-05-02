@@ -1,4 +1,4 @@
-app.controller('LoginCtrl',['$scope','$state','$http','$cookieStore','appFactory',function($scope,$state,$http,$cookieStore,appFactory) {
+app.controller('LoginCtrl',['$scope','$state','$http','$cookieStore','appFactory','baseUrl',function($scope,$state,$http,$cookieStore,appFactory,baseUrl) {
     $scope.username="";
     $scope.password="";
     $scope.isLogin=true;
@@ -22,7 +22,7 @@ app.controller('LoginCtrl',['$scope','$state','$http','$cookieStore','appFactory
             "username": $scope.username,
             "password": $scope.password
         };
-        $scope.myPromise = $http.post('https://lbmanager-node.herokuapp.com/user/login', data).then(function (response) {
+        $scope.myPromise = $http.post(baseUrl+'/user/login', data).then(function (response) {
             console.log(response);
             appFactory.toast('login sucessfully', 'success');
             $cookieStore.put('token', response.data.token);

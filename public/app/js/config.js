@@ -1,6 +1,7 @@
 /**
  * Created by venkatesh on 3/8/2018.
  */
+app.constant('baseUrl', 'https://lbmanager-node.herokuapp.com');
 app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider){
 
         /*$httpProvider.defaults.headers.common = {};
@@ -65,6 +66,16 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $http
                 url: '/issueBook',
                 templateUrl: 'app/views/issueBook.html',
                 controller: 'issueBookCtrl'
+            })
+            .state('dashboard.userProfile', {
+                url: '/userProfile',
+                templateUrl: 'app/views/userprofile.html',
+                controller: 'userProfileCtrl'
+            })
+            .state('dashboard.issuedBooks', {
+                url: '/issuedBooks',
+                templateUrl: 'app/views/issuedBooksLog.html',
+                controller: 'issuedBooksCtrl'
             })
             .state('dashboard.returnBook', {
                 url: '/returnBook',

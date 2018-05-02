@@ -1,7 +1,7 @@
 /**
  * Created by venkatesh on 4/19/2018.
  */
-app.controller('viewMemberCtrl',['$scope','$state','$cookieStore','memberfactory','appFactory','bookfactory',function($scope,$state,$cookieStore,memberfactory,appFactory,bookfactory) {
+app.controller('viewMemberCtrl',['$scope','$state','$cookieStore','memberfactory','appFactory','bookfactory','$uibModal',function($scope,$state,$cookieStore,memberfactory,appFactory,bookfactory,$uibModal) {
     $scope.memberdata=true;
     $scope.edit=true;
     $scope.fechMemobj1={};
@@ -110,6 +110,25 @@ app.controller('viewMemberCtrl',['$scope','$state','$cookieStore','memberfactory
     $scope.format = $scope.formats[0];
     $scope.cancel=function () {
         $state.go('dashboard.jobs');
+    };
+    $scope.payFine=function () {
+        var copiedMember={};
+        angular.copy($scope.fechMemobj,copiedMember);
+        $scope.message = "Show Form Button Clicked";
+        console.log($scope.message);
+
+        var modalInstance = $uibModal.open({
+            templateUrl: 'app/views/payFine.html',
+            controller: 'PayFineCtrl',
+            resolve: {
+                editingMember:copiedMember
+            }
+        });
+
+        modalInstance.result.then(function () {
+            init();
+        }, function () {
+        });
     }
 
 }]);

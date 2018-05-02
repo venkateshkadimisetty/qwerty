@@ -1,17 +1,30 @@
 /**
  * Created by venkatesh on 4/26/2018.
  */
-app.controller('userProfileCtrl',['$scope','$state','$http','$cookieStore','userProfileFactory','appFactory',function($scope,$state,$http,$cookieStore,userProfileFactory,appFactory){
-    $scope.member={};
+app.controller('userProfileCtrl',['$scope','$state','$http','$cookieStore','userfactory','appFactory',function($scope,$state,$http,$cookieStore,userfactory,appFactory){
+    $scope.edit=true;
+    $scope.userData1={};
+    $scope.editProfile=function (userData) {
+        angular.copy($scope.userData,$scope.userData1);
+        $scope.edit=false;
+
+    }
+    $scope.updateProfile=function (userData) {
+        $scope.edit=true;
+    }
+    $scope.back=function(userData){
+        $scope.edit=true;
+        init();
+    }
     function init() {
-            $scope.myPromise= userProfileFactory.userProfile().then(function(response) {
+            $scope.myPromise= userfactory.userProfile().then(function(response) {
                 if (response.status == 200) {
                     console.log(response);
-                    appFactory.toast('Member created with ID:' + response.data.memberId, 'success');
-                    $scope.member = {};
-                    $scope.memberForm.$setPristine();
+                    $scope.userData =response.data;
                 }
-                appFactory.toast('Invalid Member Data', 'danger');
+                else{
+                    appFactory.toast('Invalid User Data', 'danger');
+                }
             });
     }
     init();

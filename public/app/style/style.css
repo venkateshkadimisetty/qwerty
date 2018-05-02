@@ -39,10 +39,15 @@ h1{
 }
 th{
     margin: 2px;
+    color: white;
 }
 .memberlist{
     height: 45px;
 }
 thead{
     background-color: #7386D5;
+
+}
+.usermenu{
+   background: #fafafa;
 }

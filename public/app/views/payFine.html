@@ -1,0 +1,42 @@
+<div class="col-md-10 col-md-offset-1" style="background-color: white;padding: 40px;border-radius: 10px">
+    <form id="memberForm" name="memberForm" ng-submit="payFine(memberForm.$valid)" novalidate>
+        <div class="form-group">
+            <label>Member ID:</label>
+            <span>{{member.memberId}}</span>
+            <!-- /.input group -->
+        </div>
+        <div class="form-group">
+            <label>Name:</label>
+            <span>{{member.firstName}}  {{member.lastName}}</span>
+        </div>
+        <div class="form-group">
+            <label>PIN:</label>
+            <span>{{member.pin}}</span>
+            <!-- /.input group -->
+        </div>
+        <div class="form-group">
+            <label>Fine:</label>
+            <span>{{member.fine}}</span>
+            <!-- /.input group -->
+        </div>
+        <div class="form-group">
+            <label>Paying fine:</label>
+
+            <div class="input-group ">
+                <div class="input-group-addon">
+                    <i></i>
+                </div>
+                <input type="number" name="payingFine" class="form-control"  ng-model="payingFine" required>
+            </div>
+            <p ng-show="memberForm.payingFine.$invalid && !memberForm.payingFine.$pristine" class="help-block">Number is required.</p>
+            <!-- /.input group -->
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-block btn-success" ng-disabled="memberForm.$invalid">Pay Fine</button>
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-block btn-danger" ng-click="cancel()">Cancel</button>
+        </div>
+    </form>
+</div>

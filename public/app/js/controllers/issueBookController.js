@@ -17,7 +17,7 @@ app.controller('issueBookCtrl',['$scope','$state','$cookieStore','memberfactory'
                 $scope.bookid=true;
                 //alert('fine limit exceed');
             }
-            if(response.data.bookLimit>=3){
+            if(response.data.bookLimit==0){
                 $scope.booklimit=true;
                 $scope.bookid=true;
                 //alert('book limit exceed');

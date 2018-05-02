@@ -41,8 +41,11 @@
                 </a>
                 <ul class="list-unstyled" id="pageSubmenu">
                     <li><a ui-sref=".createBook">Create Book</a></li>
-                    <li><a ui-sref=".allBooks">All Books</a></li>
                     <li><a ui-sref=".viewBook">View Book</a></li>
+                    <li><a ui-sref=".issueBook">Issue Book</a></li>
+                    <li><a ui-sref=".returnBook">Return Book</a></li>
+                    <li><a ui-sref=".allBooks">All Books</a></li>
+                    <li><a ui-sref=".issuedBooks">Issued Books Log</a></li>
                 </ul>
             </li>
             <li>
@@ -71,21 +74,21 @@
 
         <nav class="navbar navbar-primary">
             <div class="container-fluid">
-                    <ul type="button" id="sidebarCollapse" class="btn btn-primary navbar-btn">
+                    <ul type="button" id="sidebarCollapse" class="btn btn-primary navbar-btn" style="display: inline-block">
                         <i class="glyphicon glyphicon-align-left"></i>
                     </ul>
-                    <ul class="dropdown nav navbar-top-links navbar-right">
+                    <ul class="dropdown nav navbar-top-links navbar-right pull-right" style="display: inline-block">
                         <li>
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                 <span class="glyphicon glyphicon-user"></span>
                                 <span class="fa fa-caret-down"></span>
                             </a>
-                            <ul class="dropdown-menu dropdown-user">
-                                <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                            <ul class="dropdown-menu usermenu dropdown-user">
+                                <li><a ui-sref=".userProfile" class="usermenu" ><i class="fa fa-user fa-fw"></i> User Profile</a>
                                 </li>
-                                <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                                <li><a href="#" class="usermenu"><i class="fa fa-gear fa-fw"></i> Settings</a>
                                 </li>
-                                <li><a ui-sref="login"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                                <li><a ui-sref="login" class="usermenu"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                                 </li>
                             </ul>
                             <!-- /.dropdown-user -->

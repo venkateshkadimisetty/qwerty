@@ -6,28 +6,31 @@
     <div class="panel panel-default" style="margin: 50px; margin-top: 20px; min-height: 600px">
         <div  class="panel-heading">
             <div class="input-group col-md-3 col-sm-10" style="margin: 10px; border-radius: 10px ">
-                <div class="form-group">
+                <form class="form-group" ng-submit="fetchMember(memberId)">
                     <label>Enter Member ID to Search:</label>
                     <div class="input-group ">
                         <input type="text" name="memberId" class="form-control" placeholder="Ex M1001" ng-model="memberId" required>
                         <div class="input-group-addon">
-                            <i class=" fa fa-search"  ng-click="fetchMember(memberId)"></i>
+                            <button type="submit" class=" fa fa-search"  ></button>
                         </div>
                     </div>
                     <p ng-show="memberId.$invalid && !memberId.$pristine" class="help-block">member ID is required.</p>
                     <!-- /.input group -->
-                </div>
+                </form>
             </div>
         </div>
         <div class="panel-body" ng-hide="memberdata">
-            <div class="col-md-9 col-md-offset-1 col-sm-11" style="margin-top: 20px">
+            <div class="col-md-9 col-md-offset-1 col-sm-11 table-responsive" style="margin-top: 20px">
+
                 <table class="table-responsive" style="border: none">
-                    <strong class="memberlist"><h3>Member Information</h3></strong><br>
-                    <button class="btn btn-danger btn-sm pull-right" style="margin: 5px" ng-click='delete(fechMemobj)' ng-if="edit">Delete</button>
-                    <button class="btn btn-primary btn-sm pull-right" style="margin: 5px" ng-click='editMember(fechMemobj)' ng-if="edit">Edit</button>
-                    <button class="btn btn-warning btn-sm pull-right" style="margin: 5px" ng-click='back(fechMemobj)' ng-if="!edit">Back</button>
-                    <button class="btn btn-primary btn-sm pull-right" style="margin: 5px" ng-click='updateMember()' ng-if="!edit">Update</button>
                     <tbody>
+                    <thead>
+                <strong class="memberlist"><h3>Member Information</h3></strong><br>
+                <button class="btn btn-danger btn-sm pull-right" style="margin: 5px" ng-click='delete(fechMemobj)' ng-if="edit">Delete</button>
+                <button class="btn btn-primary btn-sm pull-right" style="margin: 5px" ng-click='editMember(fechMemobj)' ng-if="edit">Edit</button>
+                <button class="btn btn-warning btn-sm pull-right" style="margin: 5px" ng-click='back(fechMemobj)' ng-if="!edit">Back</button>
+                <button class="btn btn-primary btn-sm pull-right" style="margin: 5px" ng-click='updateMember()' ng-if="!edit">Update</button>
+                    </thead>
                     <tr class="memberlist">
                         <td><strong>Member Id </strong></td>
                         <td><strong></strong>&nbsp;&nbsp;:&nbsp;&nbsp;</strong></td>
@@ -80,14 +83,14 @@
                     </tr>
                     <tr class="memberlist">
                         <td><strong>Department</strong></td>
-                        <td><strong></strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;</strong></td>
+                        <td><strong></strong>&nbsp;:&nbsp;&nbsp;</strong></td>
                         <td><span ng-if="edit">{{fechMemobj.department | capitalize}}</span>
                             <span ng-if="!edit"><input type="text" name="department" class="form-control"  ng-model="fechMemobj1.department"></span>
                         </td>
                     </tr>
                     <tr class="memberlist">
                         <td><strong>Member Type</strong></td>
-                        <td><strong></strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;</strong></td>
+                        <td><strong></strong>&nbsp;:&nbsp;&nbsp;</strong></td>
                         <td>{{fechMemobj.membertype | capitalize}}</td>
                     </tr>
                     <tr class="memberlist">
@@ -98,24 +101,23 @@
                         </td>
                     </tr>
                     <tr class="memberlist">
-                        <td><strong>Fine</strong></td>
-                        <td><strong></strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;</strong></td>
-                        <td><span ng-if="edit">{{fechMemobj.fine}}</span>
-                            <span ng-if="!edit">{{fechMemobj1.fine}}</span>
-                        </td>
-                    </tr>
-                    <tr class="memberlist">
                         <td><strong>Book Limit</strong></td>
                         <td><strong></strong>&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;</strong></td>
                         <td><span ng-if="edit">{{fechMemobj.bookLimit}}</span>
                             <span ng-if="!edit">{{fechMemobj1.bookLimit}}</span>
                         </td>
                     </tr>
+                    <tr class="memberlist">
+                        <td><strong>Fine</strong></td>
+                        <td><strong></strong>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;</strong></td>
+                        <td>{{fechMemobj.fine}}</td>
+                        <td>&emsp;<button class="btn btn-primary btn-sm pull-right" style="margin: 5px; margin-left:350px" ng-click='payFine()'>Pay Fine</button></td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
             <!--total books issued to member-->
-            <div class="col-md-9 col-md-offset-1 col-sm-11" style="margin-top: 20px">
+            <div class="col-md-9 col-md-offset-1 col-sm-11 table-responsive" style="margin-top: 20px">
                 <table class="table table-bordered table-striped  table-condensed table-hover table-responsive" id="table1">
                     <thead>
                     <tr style="width: 50px">

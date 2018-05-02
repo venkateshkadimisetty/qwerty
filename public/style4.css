@@ -164,6 +164,11 @@ ul ul a {
     padding-left: 30px !important;
     background: #6d7fcc;
 }
+.usermenu{
+    font-size: 14px !important;
+    padding: 10px !important;
+    background: #fafafa;
+}
 
 ul.CTAs {
     padding: 20px;

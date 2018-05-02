@@ -8,13 +8,38 @@
             <strong><h3>User Profile</h3></strong><br>
         </div>
         <div class="panel-body">
-            <div class="col-md-9 col-md-offset-1 col-sm-11" style="margin-top: 20px">
+            <div class="col-md-9 col-md-offset-1 col-sm-11 table-responsive" style="margin-top: 50px">
                 <table class="table-responsive" style="border: none">
+                    <button class="btn btn-primary btn-sm pull-right" style="margin: 5px" ng-click='editProfile(userData)' ng-if="edit">Edit</button>
+                    <button class="btn btn-warning btn-sm pull-right" style="margin: 5px" ng-click='back(userData)' ng-if="!edit">Back</button>
+                    <button class="btn btn-primary btn-sm pull-right" style="margin: 5px" ng-click='updateProfile(userData1)' ng-if="!edit">Update</button>
+
                     <tbody>
                     <tr class="memberlist">
-                        <td><strong>Name </strong></td>
-                        <td><strong></strong>&nbsp;:&nbsp;</strong></td>
-                        <td><span ng-if="edit">{{fechMemobj.firstName}}</span>
+                        <td><strong>User Name </strong></td>
+                        <td><strong></strong>&nbsp;&nbsp;:&nbsp;&nbsp;</strong></td>
+                        <td><span  ng-if="edit">{{userData.username}}</span>
+                            <span ng-if="!edit"><input type="text" name="userName" class="form-control"  ng-model="userData1.username"></span>
+                        </td>
+                    </tr>
+                    <tr class="memberlist">
+                        <td><strong>Email Id </strong></td>
+                        <td><strong></strong>&nbsp;&nbsp;:&nbsp;&nbsp;</strong></td>
+                        <td><span >{{userData.email}}</span>
+                            <!--<span ng-if="!edit"><input type="text" name="memberName" class="form-control"  ng-model="fechMemobj.firstName"></span>-->
+                        </td>
+                    </tr>
+                    <tr class="memberlist">
+                        <td><strong>Role </strong></td>
+                        <td><strong></strong>&nbsp;&nbsp;:&nbsp;&nbsp;</strong></td>
+                        <td><span>{{userData.role}}</span>
+                            <!--<span ng-if="!edit"><input type="text" name="memberName" class="form-control"  ng-model="fechMemobj.firstName"></span>-->
+                        </td>
+                    </tr>
+                    <tr class="memberlist">
+                        <td><strong>Role </strong></td>
+                        <td><strong></strong>&nbsp;&nbsp;:&nbsp;&nbsp;</strong></td>
+                        <td><span >{{userData.fine}}</span>
                             <!--<span ng-if="!edit"><input type="text" name="memberName" class="form-control"  ng-model="fechMemobj.firstName"></span>-->
                         </td>
                     </tr>
