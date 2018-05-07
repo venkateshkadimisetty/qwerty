@@ -46,7 +46,17 @@
                         <td><strong>Department</strong></td>
                         <td><strong></strong>&nbsp;:&nbsp;</strong></td>
                         <td><span ng-if="edit">{{fechBookobj.department}}</span>
-                            <span ng-if="!edit"><input type="text" name="department" class="form-control"  ng-model="fechBookobj1.department"></span>
+                            <span ng-if="!edit">
+                                <select name="department" class="form-control" ng-model="fechBookobj1.department" required>
+                                    <option value="ECE">ECE</option>
+                                    <option value="EEE">EEE</option>
+                                    <option value="CSE">CSE</option>
+                                    <option value="MECH">MECH</option>
+                                    <option value="CIVIL">CIVIL</option>
+                                    <option value="MCA">MCA</option>
+                                    <option value="MBA">MBA</option>
+                                </select>
+                            </span>
                         </td>
                     </tr>
                     <tr class="memberlist">

@@ -1,9 +1,15 @@
 /**
  * Created by venkatesh on 4/5/2018.
  */
-app.controller('chartsCtrl', function ($scope) {
-
-    // Sample options for first chart
+app.controller('chartsCtrl',['$scope','$state','$http','$cookieStore','bookfactory','appFactory',function($scope,$state,$http,$cookieStore,bookfactory,appFactory){
+    function init() {
+        $scope.myPromise=bookfactory.getAllBooks().then(function(response) {
+            console.log(response);
+            $scope.totalBooks=response.data;
+            $scope.totalItems = $scope.totalBooks.length;
+        });
+    }
+    init();
     $scope.chartOptions = {
         title: {
             text: 'Temperature data'
@@ -18,25 +24,29 @@ app.controller('chartsCtrl', function ($scope) {
         }]
     };
     // Sample data for pie chart
-    $scope.pieData = [{
-        name: "Microsoft Internet Explorer",
-        y: 56.33
+    $scope.pieData = [
+        {
+        name: "CIVIL",
+        y: 5
     }, {
-        name: "Chrome",
-        y: 24.03,
+        name: "ECE",
+        y: 7,
         sliced: true,
         selected: true
     }, {
-        name: "Firefox",
-        y: 10.38
+        name: "EEE",
+        y: 10
     }, {
-        name: "Safari",
-        y: 4.77
+        name: "CSE",
+        y: 8
     }, {
-        name: "Opera",
-        y: 0.91
+        name: "MECH",
+        y: 6
     }, {
-        name: "Proprietary or Undetectable",
-        y: 0.2
-    }]
-});
+        name: "MCA",
+        y: 0
+    }, {
+        name: "MBA",
+        y: 5
+        }]
+}]);

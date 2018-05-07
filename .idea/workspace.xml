@@ -2,27 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f62c145-cf53-4292-bba8-fe5b22cc1b76" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/js/controllers/issuedBooksLogController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/js/controllers/payFineController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/views/IssuedBooksLog.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/views/payFine.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/js/app.js" afterPath="$PROJECT_DIR$/public/app/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/js/config.js" afterPath="$PROJECT_DIR$/public/app/js/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/js/controllers/chartsController.js" afterPath="$PROJECT_DIR$/public/app/js/controllers/chartsController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/js/controllers/issueBookController.js" afterPath="$PROJECT_DIR$/public/app/js/controllers/issueBookController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/js/controllers/login-controller.js" afterPath="$PROJECT_DIR$/public/app/js/controllers/login-controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/js/controllers/userProfileController.js" afterPath="$PROJECT_DIR$/public/app/js/controllers/userProfileController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/js/controllers/viewMemberController.js" afterPath="$PROJECT_DIR$/public/app/js/controllers/viewMemberController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/js/factories/bookFactory.js" afterPath="$PROJECT_DIR$/public/app/js/factories/bookFactory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/js/factories/memberFactory.js" afterPath="$PROJECT_DIR$/public/app/js/factories/memberFactory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/js/factories/userProfileFactory.js" afterPath="$PROJECT_DIR$/public/app/js/factories/userProfileFactory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/style/style.css" afterPath="$PROJECT_DIR$/public/app/style/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/views/admin-dashboard.html" afterPath="$PROJECT_DIR$/public/app/views/admin-dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/views/returnBook.html" afterPath="$PROJECT_DIR$/public/app/views/returnBook.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/views/userprofile.html" afterPath="$PROJECT_DIR$/public/app/views/userprofile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/views/charts.html" afterPath="$PROJECT_DIR$/public/app/views/charts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/views/createBook.html" afterPath="$PROJECT_DIR$/public/app/views/createBook.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/views/createMember.html" afterPath="$PROJECT_DIR$/public/app/views/createMember.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/views/editBook.html" afterPath="$PROJECT_DIR$/public/app/views/editBook.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/views/editMember.html" afterPath="$PROJECT_DIR$/public/app/views/editMember.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/views/issueBook.html" afterPath="$PROJECT_DIR$/public/app/views/issueBook.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/views/login.html" afterPath="$PROJECT_DIR$/public/app/views/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/views/viewBook.html" afterPath="$PROJECT_DIR$/public/app/views/viewBook.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/views/viewMember.html" afterPath="$PROJECT_DIR$/public/app/views/viewMember.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/style4.css" afterPath="$PROJECT_DIR$/public/style4.css" />
     </list>
     <ignored path="Angular-Library-Management.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,31 +37,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="allMembers.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/app/views/allMembers.html">
+      <file leaf-file-name="editMember.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/views/editMember.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="2398">
+              <caret line="109" column="25" selection-start-line="109" selection-start-column="25" selection-end-line="109" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="issueBook.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/app/views/issueBook.html">
+      <file leaf-file-name="charts.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/views/charts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1516">
-              <caret line="75" column="26" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
+            <state relative-caret-position="154">
+              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="issueBookController.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/app/js/controllers/issueBookController.js">
+      <file leaf-file-name="createBookController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/js/controllers/createBookController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="29" column="20" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="20" />
+            <state relative-caret-position="506">
+              <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chartsController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/js/controllers/chartsController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="638">
+              <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -78,8 +80,61 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="606">
-              <caret line="56" column="65" selection-start-line="56" selection-start-column="65" selection-end-line="56" selection-end-column="65" />
+            <state relative-caret-position="22">
+              <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="viewMemberController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/js/controllers/viewMemberController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="25" column="13" selection-start-line="21" selection-start-column="9" selection-end-line="25" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="viewMember.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/app/views/viewMember.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="724">
+              <caret line="159" column="103" selection-start-line="159" selection-start-column="103" selection-end-line="159" selection-end-column="103" />
+              <folding>
+                <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tfoot#0;n#table#0;n#div#1;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="issueBook.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/views/issueBook.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1760">
+              <caret line="80" column="115" selection-start-line="80" selection-start-column="93" selection-end-line="80" selection-end-column="115" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="issueBookController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/js/controllers/issueBookController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="638">
+              <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="allbooksController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/js/controllers/allbooksController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="3" column="187" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="187" />
               <folding />
             </state>
           </provider>
@@ -102,11 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/js/factories/bookFactory.js" />
-        <option value="$PROJECT_DIR$/app/views/editMember.html" />
-        <option value="$PROJECT_DIR$/app/js/factories/memberFactory.js" />
-        <option value="$PROJECT_DIR$/app/js/factories/excel-factory.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/app/views/allMembers.html" />
         <option value="$PROJECT_DIR$/app/js/controllers/allMembersController.js" />
         <option value="$PROJECT_DIR$/app/views/editBook.html" />
@@ -114,10 +164,7 @@
         <option value="$PROJECT_DIR$/app/views/home.html" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/public/app/views/viewMember.css" />
-        <option value="$PROJECT_DIR$/public/app/views/createBook.html" />
         <option value="$PROJECT_DIR$/public/app/views/collectBook.html" />
-        <option value="$PROJECT_DIR$/public/app/views/editBook.html" />
-        <option value="$PROJECT_DIR$/public/app/views/issueBook.html" />
         <option value="$PROJECT_DIR$/public/app/views/returnBookController.js" />
         <option value="$PROJECT_DIR$/public/app/views/returnBook.js" />
         <option value="$PROJECT_DIR$/public/app/views/home.html" />
@@ -127,13 +174,11 @@
         <option value="$PROJECT_DIR$/public/app/views/allBooks.html" />
         <option value="$PROJECT_DIR$/public/app/js/controllers/allbooksController.js" />
         <option value="$PROJECT_DIR$/public/app/js/controllers/viewBookController.js" />
-        <option value="$PROJECT_DIR$/public/app/views/viewBook.html" />
         <option value="$PROJECT_DIR$/public/app/views/allMembers.html" />
         <option value="$PROJECT_DIR$/public/app/js/controllers/returnBookController.js" />
         <option value="$PROJECT_DIR$/public/app/js/controllers/allMembersController.js" />
         <option value="$PROJECT_DIR$/public/app/views/returnBook.html" />
         <option value="$PROJECT_DIR$/public/app/views/collectFine.html" />
-        <option value="$PROJECT_DIR$/public/app/js/controllers/viewMemberController.js" />
         <option value="$PROJECT_DIR$/public/app/js/controllers/payFineController.js" />
         <option value="$PROJECT_DIR$/public/app/js/app.js" />
         <option value="$PROJECT_DIR$/public/app/views/payFine.html" />
@@ -142,7 +187,6 @@
         <option value="$PROJECT_DIR$/public/app/js/factories/userProfileFactory.js" />
         <option value="$PROJECT_DIR$/public/app/views/userprofile.html" />
         <option value="$PROJECT_DIR$/public/app/js/controllers/userProfileController.js" />
-        <option value="$PROJECT_DIR$/public/app/views/viewMember.html" />
         <option value="$PROJECT_DIR$/public/style4.css" />
         <option value="$PROJECT_DIR$/public/app/style/style.css" />
         <option value="$PROJECT_DIR$/public/app/js/factories/bookFactory.js" />
@@ -152,7 +196,18 @@
         <option value="$PROJECT_DIR$/public/app/js/config.js" />
         <option value="$PROJECT_DIR$/public/app/views/IssuedBooksLog.html" />
         <option value="$PROJECT_DIR$/public/app/views/admin-dashboard.html" />
+        <option value="$PROJECT_DIR$/public/app/views/login.html" />
+        <option value="$PROJECT_DIR$/public/app/views/createBook.html" />
+        <option value="$PROJECT_DIR$/public/app/views/createMember.html" />
+        <option value="$PROJECT_DIR$/public/app/views/viewBook.html" />
+        <option value="$PROJECT_DIR$/public/app/views/editBook.html" />
+        <option value="$PROJECT_DIR$/public/app/views/editMember.html" />
+        <option value="$PROJECT_DIR$/public/app/views/charts.html" />
+        <option value="$PROJECT_DIR$/public/app/js/controllers/chartsController.js" />
+        <option value="$PROJECT_DIR$/public/app/views/issueBook.html" />
         <option value="$PROJECT_DIR$/public/app/js/controllers/issueBookController.js" />
+        <option value="$PROJECT_DIR$/public/app/js/controllers/viewMemberController.js" />
+        <option value="$PROJECT_DIR$/public/app/views/viewMember.html" />
       </list>
     </option>
   </component>
@@ -194,7 +249,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -266,28 +320,6 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="style" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Angular-Library-Management" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Angular-Library-Management" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -308,32 +340,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Angular-Library-Management" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Angular-Library-Management" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="factories" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -365,13 +371,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="last_opened_file_path" value="F:/Venkatesh work/Venkatesh Work/ParadigmSarovarAngularJS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jenkins-v2" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -539,12 +546,17 @@
       <workItem from="1525100776071" duration="2151000" />
       <workItem from="1525138378875" duration="5187000" />
       <workItem from="1525172032386" duration="14111000" />
-      <workItem from="1525223656081" duration="4716000" />
+      <workItem from="1525223656081" duration="5316000" />
+      <workItem from="1525278060755" duration="19000" />
+      <workItem from="1525360986749" duration="3734000" />
+      <workItem from="1525581990211" duration="5001000" />
+      <workItem from="1525617356308" duration="3071000" />
+      <workItem from="1525658231396" duration="1513000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="282726000" />
+    <option name="totallyTimeSpent" value="296664000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="2" width="1934" height="1036" extended-state="0" />
@@ -586,14 +598,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/views/all.html" />
     <entry file="file://$PROJECT_DIR$/public/angular-busy.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="924">
@@ -623,13 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/views/editBook.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/views/returnBookController.js" />
     <entry file="file://$PROJECT_DIR$/public/app/views/returnBook.js" />
     <entry file="file://$PROJECT_DIR$/public/app/views/home.html">
@@ -639,38 +636,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/js/controllers/createBookController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/js/controllers/allbooksController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="86" column="5" selection-start-line="78" selection-start-column="3" selection-end-line="86" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/views/createMember.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1628">
-          <caret line="74" column="46" selection-start-line="74" selection-start-column="46" selection-end-line="74" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/js/controllers/returnBookController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="858">
           <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/views/createBook.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1474">
-          <caret line="67" column="6" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -693,13 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/views/editMember.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2530">
-          <caret line="115" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -759,13 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/js/controllers/chartsController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/js/factories/appFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
@@ -780,60 +735,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/views/viewBook.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="790">
-          <caret line="61" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="61" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="108" selection-start-line="3" selection-start-column="108" selection-end-line="3" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/js/factories/userProfileFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" column="24" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/js/controllers/viewMemberController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14">
-          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/views/userprofile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="58" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="58" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#table#0;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#1;n#table#0;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#2;n#table#0;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#1438#1444#0" expanded="true" />
-            <element signature="e#1445#1451#0" expanded="true" />
-            <element signature="e#1451#1457#0" expanded="true" />
-            <element signature="e#1903#1909#0" expanded="true" />
-            <element signature="e#1910#1916#0" expanded="true" />
-            <element signature="e#1916#1922#0" expanded="true" />
-            <element signature="e#2359#2365#0" expanded="true" />
-            <element signature="e#2366#2372#0" expanded="true" />
-            <element signature="e#2372#2378#0" expanded="true" />
-            <element signature="e#2813#2819#0" expanded="true" />
-            <element signature="e#2820#2826#0" expanded="true" />
-            <element signature="e#2826#2832#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -841,7 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -849,7 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="592">
           <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -857,7 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -865,26 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/js/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="75" column="34" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/views/admin-dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="42" column="69" selection-start-line="42" selection-start-column="69" selection-end-line="42" selection-end-column="69" />
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#div#0;n#nav#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#1;n#div#0;n#nav#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -892,7 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1650">
           <caret line="75" column="25" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -900,9 +781,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="3" column="31" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -910,99 +788,161 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="68" selection-start-line="22" selection-start-column="68" selection-end-line="22" selection-end-column="68" />
-          <folding>
-            <element signature="e#1246#1252#0" expanded="true" />
-            <element signature="e#1392#1398#0" expanded="true" />
-            <element signature="e#1538#1544#0" expanded="true" />
-            <element signature="e#1685#1691#0" expanded="true" />
-            <element signature="e#1835#1841#0" expanded="true" />
-            <element signature="e#1988#1994#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
+    <entry file="file://$PROJECT_DIR$/public/app/views/userprofile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="56" column="65" selection-start-line="56" selection-start-column="65" selection-end-line="56" selection-end-column="65" />
-          <folding />
+        <state relative-caret-position="484">
+          <caret line="22" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/views/viewMember.html">
+    <entry file="file://$PROJECT_DIR$/public/app/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#1;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#2;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#3;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#2492#2498#0" expanded="true" />
-            <element signature="e#2499#2505#0" expanded="true" />
-            <element signature="e#2505#2511#0" expanded="true" />
-            <element signature="e#2760#2766#0" expanded="true" />
-            <element signature="e#2767#2773#0" expanded="true" />
-            <element signature="e#2773#2779#0" expanded="true" />
-            <element signature="e#3245#3251#0" expanded="true" />
-            <element signature="e#3252#3258#0" expanded="true" />
-            <element signature="e#3258#3264#0" expanded="true" />
-            <element signature="e#3701#3707#0" expanded="true" />
-            <element signature="e#3708#3714#0" expanded="true" />
-            <element signature="e#3714#3720#0" expanded="true" />
-            <element signature="e#4515#4521#0" expanded="true" />
-            <element signature="e#4522#4528#0" expanded="true" />
-            <element signature="e#4528#4534#0" expanded="true" />
-            <element signature="e#5456#5462#0" expanded="true" />
-            <element signature="e#5463#5469#0" expanded="true" />
-            <element signature="e#5469#5475#0" expanded="true" />
-            <element signature="e#5917#5923#0" expanded="true" />
-            <element signature="e#5924#5930#0" expanded="true" />
-            <element signature="e#5930#5936#0" expanded="true" />
-            <element signature="e#6400#6406#0" expanded="true" />
-            <element signature="e#6407#6413#0" expanded="true" />
-            <element signature="e#6413#6419#0" expanded="true" />
-            <element signature="e#6693#6699#0" expanded="true" />
-            <element signature="e#6700#6706#0" expanded="true" />
-            <element signature="e#6706#6712#0" expanded="true" />
-            <element signature="e#7145#7151#0" expanded="true" />
-            <element signature="e#7152#7158#0" expanded="true" />
-            <element signature="e#7158#7164#0" expanded="true" />
-            <element signature="e#7557#7563#0" expanded="true" />
-            <element signature="e#7564#7570#0" expanded="true" />
-            <element signature="e#7570#7576#0" expanded="true" />
-            <element signature="e#7678#7684#0" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#td#3;n#tr#10;n#table#0;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="66">
+          <caret line="3" column="8" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/js/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/views/allMembers.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1188">
+          <caret line="54" column="6" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/views/login.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/views/admin-dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="72" column="22" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/views/createBook.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1056">
+          <caret line="48" column="41" selection-start-line="40" selection-start-column="32" selection-end-line="48" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/views/createMember.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2310">
+          <caret line="105" column="37" selection-start-line="97" selection-start-column="28" selection-end-line="105" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/views/editBook.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1144">
+          <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/views/viewBook.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="57" column="41" selection-start-line="49" selection-start-column="32" selection-end-line="57" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/views/editMember.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2398">
+          <caret line="109" column="25" selection-start-line="109" selection-start-column="25" selection-end-line="109" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/views/charts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/js/controllers/allbooksController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="187" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="187" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/js/controllers/chartsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/js/controllers/createBookController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/views/issueBook.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1516">
-          <caret line="75" column="26" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
+        <state relative-caret-position="1760">
+          <caret line="80" column="115" selection-start-line="80" selection-start-column="93" selection-end-line="80" selection-end-column="115" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/js/controllers/issueBookController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="29" column="20" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="20" />
+        <state relative-caret-position="638">
+          <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/js/controllers/viewMemberController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="13" selection-start-line="21" selection-start-column="9" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/views/viewMember.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="724">
+          <caret line="159" column="103" selection-start-line="159" selection-start-column="103" selection-end-line="159" selection-end-column="103" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tfoot#0;n#table#0;n#div#1;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

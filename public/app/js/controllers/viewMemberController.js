@@ -7,17 +7,23 @@ app.controller('viewMemberCtrl',['$scope','$state','$cookieStore','memberfactory
     $scope.fechMemobj1={};
     $scope.fetchMember=function (memberId) {
         $scope.myPromise= memberfactory.fetchMember(memberId).then(function(response) {
+            $scope.getmember=false;
           if(response.status== 200)
           {
             console.log(response);
             $scope.fechMemobj=response.data;
             $scope.memberdata=false;
           }
-          else
+          if(response.data.length==0)
+            {
+                $scope.getmember=true;
+                $scope.memberdata=true;
+            }
+         /* else
           {
             $scope.memberdata=true;
             appFactory.toast("Invalid Member ID", "danger");
-          }
+          }*/
         }, function (error) {
             appFactory.toast("Invalid Member ID", "danger");
             //alert("Fetching data failed!!!");

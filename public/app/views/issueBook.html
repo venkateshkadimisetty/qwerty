@@ -17,6 +17,7 @@
                         </div>
                         <p ng-show="issueBookForm.memberId.$invalid && !issueBookForm.memberId.$pristine" class="help-block">member ID is required.</p>
                         <p ng-show="booklimit" class="help-block">Member Exceeded Book Limit.</p>
+                        <p ng-show="memberstatus" class="help-block">Member is not Available.</p>
                         <!-- /.input group -->
                     </div>
                     <div class="form-group">
@@ -39,6 +40,8 @@
 
                         </div>
                         <p ng-show="issueBookForm.bookId.$invalid && !issueBookForm.bookId.$pristine" class="help-block">Book ID is required.</p>
+                        <p ng-show="bookstatus" class="help-block">Book is not Available.</p>
+                        <p ng-show="bookdata" class="help-block">Book is Already Issued.</p>
                         <!-- /.input group -->
                     </div>
                     <div class="form-group">

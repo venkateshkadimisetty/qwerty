@@ -15,6 +15,7 @@
                         </div>
                     </div>
                     <p ng-show="memberId.$invalid && !memberId.$pristine" class="help-block">member ID is required.</p>
+                    <p ng-show="getmember" class="help-block">Member is not Available.</p>
                     <!-- /.input group -->
                 </form>
             </div>
@@ -85,7 +86,17 @@
                         <td><strong>Department</strong></td>
                         <td><strong></strong>&nbsp;:&nbsp;&nbsp;</strong></td>
                         <td><span ng-if="edit">{{fechMemobj.department | capitalize}}</span>
-                            <span ng-if="!edit"><input type="text" name="department" class="form-control"  ng-model="fechMemobj1.department"></span>
+                            <span ng-if="!edit">
+                                <select name="department" class="form-control" ng-model="fechBookobj1.department" required>
+                                    <option value="ECE">ECE</option>
+                                    <option value="EEE">EEE</option>
+                                    <option value="CSE">CSE</option>
+                                    <option value="MECH">MECH</option>
+                                    <option value="CIVIL">CIVIL</option>
+                                    <option value="MCA">MCA</option>
+                                    <option value="MBA">MBA</option>
+                                </select>
+                            </span>
                         </td>
                     </tr>
                     <tr class="memberlist">
@@ -145,6 +156,9 @@
                         <td><button class="btn btn-warning btn-sm" style="margin: 5px" ng-click='returnBook(fechMemIssueBook.bookIssueId)'>Return Book</button></td>
                     </tr>
                     </tbody>
+                    <tfoot ng-if="fechMemIssueBooks.length==0">
+                     <td colspan="8" style="text-align: center"><h4>No Books Issued to this Member</h4></td>
+                    </tfoot>
                 </table>
             </div>
         </div>
