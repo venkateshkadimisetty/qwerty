@@ -1,27 +1,33 @@
 <div class="col-md-10 col-md-offset-1" style="background-color: white;padding: 40px;border-radius: 10px">
     <form id="memberForm" name="memberForm" ng-submit="payFine(memberForm.$valid)" novalidate>
-        <div class="form-group">
-            <label>Member ID:</label>
-            <span>{{member.memberId}}</span>
+        <table class="table-responsive  table-responsive" style="border: none">
+        <tr class="memberlist">
+            <td><strong>Member ID</strong></td>
+            <td><strong>&nbsp;:&nbsp;</strong></td>
+            <td>{{member.memberId}}</td>
             <!-- /.input group -->
-        </div>
-        <div class="form-group">
-            <label>Name:</label>
-            <span>{{member.firstName}}  {{member.lastName}}</span>
-        </div>
-        <div class="form-group">
-            <label>PIN:</label>
-            <span>{{member.pin}}</span>
+        </tr>
+        <tr class="memberlist">
+            <td><strong>Name</strong></td>
+            <td><strong>&nbsp;:&nbsp;</strong></td>
+            <td>{{member.firstName}}  {{member.lastName}}</td>
+        </tr>
+        <tr class="memberlist">
+            <td><strong>PIN</strong></td>
+            <td><strong>&nbsp;:&nbsp;</strong></td>
+            <td>{{member.pin}}</td>
             <!-- /.input group -->
-        </div>
-        <div class="form-group">
-            <label>Fine:</label>
-            <span>{{member.fine}}</span>
+        </tr>
+        <tr class="memberlist">
+            <td><strong>Fine</strong></td>
+            <td><strong>&nbsp;:&nbsp;</strong></td>
+            <td>{{member.fine}}</td>
             <!-- /.input group -->
-        </div>
+        </tr>
+        </table>
         <div class="form-group">
-            <label>Paying fine:</label>
-
+            <label>Paying fine</label>
+            <td><strong>:&nbsp;</strong></td>
             <div class="input-group ">
                 <div class="input-group-addon">
                     <i></i>
@@ -29,11 +35,12 @@
                 <input type="number" name="payingFine" class="form-control"  ng-model="payingFine" required>
             </div>
             <p ng-show="memberForm.payingFine.$invalid && !memberForm.payingFine.$pristine" class="help-block">Number is required.</p>
+            <p ng-if="member.fine<payingFine" class="help-block">You can not pay more fine.</p>
             <!-- /.input group -->
         </div>
 
         <div class="form-group">
-            <button type="submit" class="btn btn-block btn-success" ng-disabled="memberForm.$invalid">Pay Fine</button>
+            <button type="submit" class="btn btn-block btn-success" ng-disabled="member.fine<payingFine">Pay Fine</button>
         </div>
         <div class="form-group">
             <button type="button" class="btn btn-block btn-danger" ng-click="cancel()">Cancel</button>

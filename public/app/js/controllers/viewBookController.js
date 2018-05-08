@@ -7,6 +7,12 @@ app.controller('viewBookCtrl',['$scope','$state','$cookieStore','memberfactory',
     $scope.fechBookobj1={};
     $scope.fetchBook=function (bookId) {
         $scope.myPromise= bookfactory.fetchBook(bookId).then(function(response) {
+            $scope.bookavailable=false;
+            $scope.bookdata=true;
+            if(response.data==""){
+                $scope.bookdata=true;
+                $scope.bookavailable=true;
+            }
             if(response.status== 200)
             {
                 console.log(response);

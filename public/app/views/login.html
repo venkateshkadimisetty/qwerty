@@ -1,62 +1,64 @@
-<div class="col-md-4 col-md-offset-4 ">
-<div class="login-form col-md-10 col-md-offset-1  ">
-    <div cg-busy="{promise:myPromise,message:'Loading',backdrop:true}"></div>
-    <toaster-container  style="width: 100%; padding: 10px; text-align: center; " toaster-options="{'close-button':false, 'time-out':{ 'toast-warning': 2000, 'toast-error': 0 } }"></toaster-container>
-    <div style="text-align: center">
-    </div>
+<div class="container">
+    <div class="col-md-4 col-md-offset-4 ">
+        <div class="login-form col-md-12 ">
+            <div cg-busy="{promise:myPromise,message:'Loading',backdrop:true}"></div>
+            <toaster-container  style="width: 100%; padding: 10px; text-align: center; " toaster-options="{'close-button':false, 'time-out':{ 'toast-warning': 2000, 'toast-error': 0 } }"></toaster-container>
+            <div style="text-align: center">
+            </div>
 
 
-    <div class="panel panel-default loginform">
+            <div class="panel panel-default loginform">
 
-        <div>
+                <div>
 
-            <h1 style="text-align: center;color: white">LOG IN</h1>
+                    <h1 style="text-align: center;color: white">LOG IN</h1>
+
+                </div>
+                <div class="panel-body">
+                    <div ng-show="isLogin">
+                        <form name="loginForm"  ng-submit="login()" style="margin-top:30px;margin-bottom: 30px;" novalidate>
+
+                            <div>
+
+                                <input type="text" name="username" class="form-control input-lg" ng-model="username" placeholder="Username">
+
+                            </div>
+
+                            <div style="margin-top: 20px">
+
+                                <input type="password" name="password" class="form-control input-lg" ng-model="password" placeholder="Password">
+
+                            </div>
+
+                            <div style="margin-top: 35px">
+
+                                <button type="submit" class=" form-control input-lg" style="color: white;font-size: 16pt;background-color: #00bfe8">LOG IN</button>
+
+                            </div>
+                            <div style="margin-top: 25px">
+                                <a href="#" ng-click="forgot()" style="color: white"><h5>Forgot Password</h5></a>
+                            </div>
+                        </form>
+                    </div>
+                    <div ng-hide="isLogin">
+                        <form name="loginForm"  ng-submit="login()" style="margin-top:30px;margin-bottom: 30px;" novalidate>
+
+                            <div>
+
+                                <input type="text" name="username" class="form-control input-lg" ng-model="username" placeholder="Username">
+
+                            </div>
+
+                            <div style="margin-top: 35px">
+
+                                <button type="submit" class=" form-control input-lg" style="color: white;font-size: 16pt;background-color: #00bfe8">RESET PASSWORD</button>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
 
         </div>
-        <div class="panel-body">
-            <div ng-show="isLogin">
-                <form name="loginForm"  ng-submit="login()" style="margin-top:30px;margin-bottom: 30px;" novalidate>
-
-                    <div>
-
-                        <input type="text" name="username" class="form-control input-lg" ng-model="username" placeholder="Username">
-
-                    </div>
-
-                    <div style="margin-top: 20px">
-
-                        <input type="password" name="password" class="form-control input-lg" ng-model="password" placeholder="Password">
-
-                    </div>
-
-                    <div style="margin-top: 35px">
-
-                        <button type="submit" class=" form-control input-lg" style="color: white;font-size: 16pt;background-color: #00bfe8">LOG IN</button>
-
-                    </div>
-                    <div style="margin-top: 25px">
-                        <a href="#" ng-click="forgot()" style="color: white"><h5>Forgot Password</h5></a>
-                    </div>
-                </form>
-            </div>
-            <div ng-hide="isLogin">
-                <form name="loginForm"  ng-submit="login()" style="margin-top:30px;margin-bottom: 30px;" novalidate>
-
-                    <div>
-
-                        <input type="text" name="username" class="form-control input-lg" ng-model="username" placeholder="Username">
-
-                    </div>
-
-                    <div style="margin-top: 35px">
-
-                        <button type="submit" class=" form-control input-lg" style="color: white;font-size: 16pt;background-color: #00bfe8">RESET PASSWORD</button>
-
-                    </div>
-                </form>
-            </div>
-        </div>
     </div>
-
-</div>
 </div>
