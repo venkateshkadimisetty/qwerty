@@ -9,20 +9,18 @@ app.controller('viewBookCtrl',['$scope','$state','$cookieStore','memberfactory',
         $scope.myPromise= bookfactory.fetchBook(bookId).then(function(response) {
             $scope.bookavailable=false;
             $scope.bookdata=true;
-            if(response.data==""){
-                $scope.bookdata=true;
-                $scope.bookavailable=true;
-            }
             if(response.status== 200)
             {
-                console.log(response);
-                $scope.fechBookobj=response.data;
-                $scope.bookdata=false;
-            }
-            else
-            {
-                $scope.bookdata=true;
-                appFactory.toast("Invalid Book ID", "danger");
+                if(response.data=="")
+                {
+                    $scope.bookdata=true;
+                    $scope.bookavailable=true;
+                }
+                else{
+                    console.log(response);
+                    $scope.fechBookobj=response.data;
+                    $scope.bookdata=false;
+                }
             }
         }, function (error) {
             appFactory.toast("Invalid Book ID", "danger");
@@ -51,12 +49,17 @@ app.controller('viewBookCtrl',['$scope','$state','$cookieStore','memberfactory',
 
     }
     $scope.delete=function (fechBookobj) {
-        if(confirm("Are you sure you want to delete this book?!")){
-            $scope.myPromise= bookfactory.deleteBook(fechBookobj).then(function(response) {
-                console.log(response);
-                appFactory.toast('Book Deleted with ID:'+fechBookobj.bookId,'success');
-                $state.go('dashboard.jobs');
-            });
+        if(fechBookobj.isAvailable==false){
+            appFactory.toast('Book is Already Issued','danger');
+        }
+        if(fechBookobj.isAvailable==true){
+            if(confirm("Are you sure you want to delete this book?!")){
+                $scope.myPromise= bookfactory.deleteBook(fechBookobj).then(function(response) {
+                    console.log(response);
+                    appFactory.toast('Book Deleted with ID:'+fechBookobj.bookId,'success');
+                    $state.go('dashboard.jobs');
+                });
+            }
         }
     }
     $scope.cancel=function () {

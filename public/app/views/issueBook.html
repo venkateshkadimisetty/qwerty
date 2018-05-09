@@ -6,7 +6,7 @@
     <div class="panel panel-default" style="margin: 50px; margin-top: 20px; min-height: 600px">
         <div class="panel-body">
             <div class="col-md-6 col-md-offset-1" style="margin-top: 20px">
-                <form name="issueBookForm" id="issueBookForm" ng-submit="issueBook(issueBookForm.$valid)" novalidate>
+                <form name="issueBookForm" id="issueBookForm" ng-submit="issueBook(issueBookForm.$invalid)" novalidate>
                     <div class="form-group">
                         <label>Member ID:</label>
                         <div class="input-group ">
@@ -26,7 +26,7 @@
                             <div class="input-group-addon">
                                 <i></i>
                             </div>
-                            <input type="text" name="memberName" class="form-control"  ng-model="fechMemobj.firstName" readonly>
+                            <input type="text" name="memberName" class="form-control"  ng-model="fechMemobj.firstName | capitalize" readonly>
                         </div>
                         <!-- /.input group -->
                     </div>
@@ -50,7 +50,7 @@
                             <div class="input-group-addon">
                                 <i></i>
                             </div>
-                            <input type="text" name="bookName" class="form-control"  ng-model="fechBookobj.bookName" readonly>
+                            <input type="text" name="bookName" class="form-control"  ng-model="fechBookobj.bookName | capitalize" readonly>
 
                         </div>
                         <!-- /.input group -->

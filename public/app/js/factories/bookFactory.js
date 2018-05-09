@@ -10,7 +10,6 @@ app.factory('bookfactory',['$http','$cookieStore','baseUrl',function ($http,$coo
             console.log(response);
             return response;
         }, function (error) {
-            alert("Fetching data failed!!!");
             return error;
         });
     }
@@ -21,7 +20,7 @@ app.factory('bookfactory',['$http','$cookieStore','baseUrl',function ($http,$coo
             console.log(response);
             return response;
         }, function (error) {
-            alert("Fetching data failed!!!");
+
             return error;
         });
     }
@@ -32,7 +31,7 @@ app.factory('bookfactory',['$http','$cookieStore','baseUrl',function ($http,$coo
             console.log(response);
             return response;
         }, function (error) {
-            alert("Fetching data failed!!!");
+
             return error;
         });
     }
@@ -42,7 +41,7 @@ app.factory('bookfactory',['$http','$cookieStore','baseUrl',function ($http,$coo
             console.log(response);
             return response;
         }, function (error) {
-            alert("Fetching data failed!!!");
+
             return error;
         });
     }
@@ -52,7 +51,7 @@ app.factory('bookfactory',['$http','$cookieStore','baseUrl',function ($http,$coo
             console.log(response);
             return response;
         }, function (error) {
-            alert("Fetching data failed!!!");
+
             return error;
         });
     }
@@ -62,7 +61,7 @@ app.factory('bookfactory',['$http','$cookieStore','baseUrl',function ($http,$coo
             console.log(response);
             return response;
         }, function (error) {
-            alert("Fetching data failed!!!");
+
             return error;
         });
     }
@@ -72,7 +71,7 @@ app.factory('bookfactory',['$http','$cookieStore','baseUrl',function ($http,$coo
             console.log(response);
             return response;
         }, function (error) {
-            alert("Fetching data failed!!!");
+
             return error;
         });
     }
@@ -82,7 +81,7 @@ app.factory('bookfactory',['$http','$cookieStore','baseUrl',function ($http,$coo
             console.log(response);
             return response;
         }, function (error) {
-            alert("Fetching data failed!!!");
+
             return error;
         });
     }
@@ -92,7 +91,7 @@ app.factory('bookfactory',['$http','$cookieStore','baseUrl',function ($http,$coo
             console.log(response);
             return response;
         }, function (error) {
-            alert("Fetching data failed!!!");
+
             return error;
         });
     }
@@ -102,7 +101,7 @@ app.factory('bookfactory',['$http','$cookieStore','baseUrl',function ($http,$coo
             console.log(response);
             return response;
         }, function (error) {
-            alert("Fetching data failed!!!");
+
             return error;
         });
     }

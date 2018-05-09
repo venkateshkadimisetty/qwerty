@@ -32,14 +32,14 @@
                     <tr class="memberlist">
                         <td><strong>Name </strong></td>
                         <td><strong></strong>&nbsp;:&nbsp;</strong></td>
-                        <td><span ng-if="edit">{{fechBookobj.bookName}}</span>
+                        <td><span ng-if="edit">{{fechBookobj.bookName | capitalize}}</span>
                             <span ng-if="!edit"><input type="text" name="bookName" class="form-control"  ng-model="fechBookobj1.bookName"></span>
                         </td>
                     </tr>
                     <tr class="memberlist">
                         <td><strong>Author </strong></td>
                         <td><strong></strong>&nbsp;:&nbsp;</strong></td>
-                        <td><span ng-if="edit">{{fechBookobj.author}}</span>
+                        <td><span ng-if="edit">{{fechBookobj.author }}</span>
                             <span ng-if="!edit"><input type="text" name="bookName" class="form-control"  ng-model="fechBookobj1.author"></span>
                         </td>
                     </tr>

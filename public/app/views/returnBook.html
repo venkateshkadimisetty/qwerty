@@ -34,7 +34,7 @@
                     <tr class="memberlist">
                         <td><strong>Member Name </strong></td>
                         <td><strong>&nbsp;:&nbsp;</strong></td>
-                        <td>{{fechIssueBookobj.member.firstName}}</td>
+                        <td>{{fechIssueBookobj.member.firstName | capitalize}}</td>
                     </tr>
                     <tr class="memberlist">
                         <td><strong>Book ID </strong></td>
@@ -44,12 +44,12 @@
                     <tr class="memberlist">
                         <td><strong>Book Name </strong></td>
                         <td><strong>&nbsp;:&nbsp;</strong></td>
-                        <td>{{fechIssueBookobj.book.bookName}}</td>
+                        <td>{{fechIssueBookobj.book.bookName | capitalize}}</td>
                     </tr>
                     <tr class="memberlist">
                         <td><strong>Issued By Name </strong></td>
                         <td><strong>&nbsp;:&nbsp;</strong></td>
-                        <td>{{fechIssueBookobj.issuedBy}}</td>
+                        <td>{{fechIssueBookobj.issuedBy | capitalize}}</td>
                     </tr>
                     <tr class="memberlist">
                         <td><strong>Issue Date</strong></td>

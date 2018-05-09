@@ -10,7 +10,7 @@ app.factory('memberfactory',['$http','$cookieStore','baseUrl',function ($http,$c
             console.log(response);
            return response;
         }, function (error) {
-            alert("Fetching data failed!!!");
+
            return error;
         });
     }
@@ -21,7 +21,7 @@ app.factory('memberfactory',['$http','$cookieStore','baseUrl',function ($http,$c
             console.log(response);
             return response;
         }, function (error) {
-            alert("Fetching data failed!!!");
+
             return error;
         });
     }
@@ -32,7 +32,7 @@ app.factory('memberfactory',['$http','$cookieStore','baseUrl',function ($http,$c
             console.log(response);
             return response;
         }, function (error) {
-            alert("Fetching data failed!!!");
+
             return error;
         });
     }
@@ -43,7 +43,7 @@ app.factory('memberfactory',['$http','$cookieStore','baseUrl',function ($http,$c
             console.log(response);
            return response;
         }, function (error) {
-            alert("Fetching data failed!!!");
+
            return error;
         });
     }
@@ -54,7 +54,7 @@ app.factory('memberfactory',['$http','$cookieStore','baseUrl',function ($http,$c
             console.log(response);
             return response;
         }, function (error) {
-            alert("Fetching data failed!!!");
+
             return error;
         });
     }
@@ -65,7 +65,7 @@ app.factory('memberfactory',['$http','$cookieStore','baseUrl',function ($http,$c
             console.log(response);
             return response;
         }, function (error) {
-            alert("Fetching data failed!!!");
+
             return error;
         });
     }

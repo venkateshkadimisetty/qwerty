@@ -14,25 +14,28 @@ app.controller('issueBookCtrl',['$scope','$state','$cookieStore','memberfactory'
             $scope.bookid=false;
             $scope.booklimit=false;
             $scope.memberstatus=false;
-            if(response.status==200){
-                $scope.fechMemobj=response.data;
-            }
-            if(response.data==""){
+            $scope.fechMemobj=response.data;
+            if(response.status==400){
                 $scope.memberstatus=true;
-                $scope.issueBookForm.$invalid=true;
+            }else if(response.status==200){
+                if(response.data==""){
+                    $scope.memberstatus=true;
+                    $scope.issueBookForm.$invalid=true;
+                } else
+                if(response.data.fine>=100){
+                    $scope.booklimit=true;
+                    $scope.bookid=true;
+                    //alert('fine limit exceed');
+                    $scope.issueBookForm.$invalid=true;
+                } else
+                if(response.data.bookLimit==0){
+                    $scope.booklimit=true;
+                    $scope.bookid=true;
+                    //alert('book limit exceed');
+                    $scope.issueBookForm.$invalid=true;
+                }
             }
-            if(response.data.fine>=100){
-                $scope.booklimit=true;
-                $scope.bookid=true;
-                //alert('fine limit exceed');
-                $scope.issueBookForm.$invalid=true;
-            }
-            if(response.data.bookLimit==0){
-                $scope.booklimit=true;
-                $scope.bookid=true;
-                //alert('book limit exceed');
-                $scope.issueBookForm.$invalid=true;
-            }
+
         });
     }
     $scope.fetchBook=function (BookId) {
@@ -40,27 +43,24 @@ app.controller('issueBookCtrl',['$scope','$state','$cookieStore','memberfactory'
             console.log(response);
             $scope.bookstatus=false;
             $scope.bookdata=false;
-            if(response.status==200){
-                $scope.fechBookobj=response.data;
-            }
-            if(response.data.isAvailable==false){
-                $scope.bookstatus=true;
-                $scope.issueBookForm.$invalid=true;
-            }
             if(response.status==400){
                 $scope.bookstatus=true;
                 $scope.issueBookForm.$invalid=true;
+            }else if(response.status==200){
+                $scope.fechBookobj=response.data;
+                if(response.data==""){
+                    $scope.bookstatus=true;
+                    $scope.issueBookForm.$invalid=true;
+                }else if(response.data.isAvailable==false){
+                    $scope.bookdata=true;
+                    $scope.issueBookForm.$invalid=true;
+                }
             }
-            if(response.data==""){
-                $scope.bookdata=true;
-                $scope.issueBookForm.$invalid=true;
-            }
-
         });
 
     }
-    $scope.issueBook=function (isValid) {
-        if(isValid){
+    $scope.issueBook=function (isInvalid) {
+        if(!isInvalid){
             $scope.issueobj.username=$cookieStore.get('username');
             $scope.issueobj.memberId=$scope.issueBookobj.memberId;
             $scope.issueobj.bookId=$scope.issueBookobj.bookId;
