@@ -47,7 +47,7 @@
                     <tr class="memberlist">
                         <td><strong>Pin</strong></td>
                         <td><strong>&nbsp;&nbsp;:&nbsp;&nbsp;</strong></td>
-                        <td><span ng-if="edit">{{fechMemobj.pin}}</span>
+                        <td><span ng-if="edit">{{fechMemobj.pin | uppercase}}</span>
                             <span ng-if="!edit"><input type="text" name="pin" class="form-control"  ng-model="fechMemobj1.pin"></span>
                         </td>
                     </tr>
@@ -122,7 +122,7 @@
                         <td><strong>Fine</strong></td>
                         <td><strong>&nbsp;&nbsp;:&nbsp;&nbsp;</strong></td>
                         <td>{{fechMemobj.fine}}</td>
-                        <td>&emsp;<button class="btn btn-primary btn-sm pull-right" style="margin: 5px; margin-left:350px" ng-click='payFine()'>Pay Fine</button></td>
+                        <td>&emsp;<button class="btn btn-primary btn-sm pull-right" ng-disabled="fechMemobj.fine==0" style="margin: 5px; margin-left:350px" ng-click='payFine()'>Pay Fine</button></td>
                     </tr>
                     </tbody>
                 </table>

@@ -77,7 +77,10 @@ app.controller('allBooksCtrl',['$scope','$state','$http','$cookieStore','bookfac
 
 
     $scope.delete=function (book) {
-        if(confirm("Are you sure you want to delete this book?!")){
+        if(book.isAvailable==false){
+            appFactory.toast('Please Collect Book to Delete','danger');
+        }
+        else if(confirm("Are you sure you want to delete this book?!")){
             $scope.myPromise= bookfactory.deleteBook(book).then(function(response) {
                 console.log(response);
                 appFactory.toast('Book Deleted with ID:'+book.bookId,'success');

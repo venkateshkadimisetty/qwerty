@@ -41,7 +41,7 @@
                     <td>{{member.memberId}}</td>
                     <td>{{member.firstName | capitalize}}</td>
                     <td>{{member.lastName  | capitalize}}</td>
-                    <td>{{member.pin}}</td>
+                    <td>{{member.pin  | uppercase}}</td>
                     <td>{{member.joinDate | date:'dd MMM yyyy'}}</td>
                     <td>{{member.email}}</td>
                     <td>{{member.gender}}</td>
@@ -49,7 +49,7 @@
                     <td>{{3-member.bookLimit}}</td>
                     <td>{{member.fine}}</td>
                     <td>{{member.membertype}}</td>
-                    <td><button class="btn btn-warning btn-md" style="margin: 5px;display: inline" ng-click='editMember(member)'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button><button class="btn btn-danger btn-md" style="margin: 5px;display: inline" ng-click='delete(member)'><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+                    <td style="text-align: center"><button class="btn btn-warning btn-md" style="margin: 5px;display: inline" ng-click='editMember(member)'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button><button class="btn btn-danger btn-md" style="margin: 5px;display: inline" ng-click='delete(member)'><i class="fa fa-trash" aria-hidden="true"></i></button></td>
                 </tr>
                 </tbody>
             </table>

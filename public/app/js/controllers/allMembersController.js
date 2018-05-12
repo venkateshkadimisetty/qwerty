@@ -66,7 +66,9 @@ app.controller('allMembersCtrl',['$scope','$state','$http','$cookieStore','membe
         return 'glyphicon-sort';
     }
     $scope.delete=function (member) {
-        if(confirm("Are you sure you want to delete member!"))
+        if(member.bookLimit!=3 || member.fine ){
+            appFactory.toast('Member Need to Pay Fine or Return Book','danger');
+        }else if(confirm("Are you sure you want to delete member!"))
         {
             $scope.myPromise= memberfactory.deleteMember(member).then(function(response) {
                 console.log(response);

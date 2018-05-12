@@ -2,14 +2,34 @@
  * Created by venkatesh on 4/5/2018.
  */
 app.controller('chartsCtrl',['$scope','$state','$http','$cookieStore','bookfactory','appFactory',function($scope,$state,$http,$cookieStore,bookfactory,appFactory){
+    $scope.singleobj={};
+    $scope.pieData=[];
     function init() {
         $scope.myPromise=bookfactory.getAllBooks().then(function(response) {
             console.log(response);
             $scope.totalBooks=response.data;
             $scope.totalItems = $scope.totalBooks.length;
+            for(var i=0;i<$scope.totalBooks.length;i++){
+                if($scope.singleobj.hasOwnProperty($scope.totalBooks[i].department)){
+                    $scope.singleobj[$scope.totalBooks[i].department]++;
+                }
+                else{
+                    $scope.singleobj[$scope.totalBooks[i].department]=1;
+                }
+            }
+            console.log('$scope.singleobj',$scope.singleobj);
+            for (var key in $scope.singleobj) {
+                if ($scope.singleobj.hasOwnProperty(key)) {
+                console.log(key + " -> " + $scope.singleobj[key]);
+                var piesingledata={name:key, y:$scope.singleobj[key]};
+                $scope.pieData.push(piesingledata);
+                }
+            }
+            console.log($scope.pieData);
         });
+
     }
-    init();
+
     $scope.chartOptions = {
         title: {
             text: 'Temperature data'
@@ -48,5 +68,6 @@ app.controller('chartsCtrl',['$scope','$state','$http','$cookieStore','bookfacto
     }, {
         name: "MBA",
         y: 5
-        }]
+        }];
+    init();
 }]);

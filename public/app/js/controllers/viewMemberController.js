@@ -66,7 +66,9 @@ app.controller('viewMemberCtrl',['$scope','$state','$cookieStore','memberfactory
 
     }
     $scope.delete=function (fechMemobj) {
-        if(confirm("Are you sure you want to delete member!"))
+        if(fechMemobj.fine>0 || fechMemobj.bookLimit!=3){
+            appFactory.toast('Member Need to Pay Fine or Return Book','danger');
+        } else if(confirm("Are you sure you want to delete member!"))
         {
             $scope.myPromise= memberfactory.deleteMember(fechMemobj).then(function(response) {
                 console.log(response);
@@ -132,7 +134,7 @@ app.controller('viewMemberCtrl',['$scope','$state','$cookieStore','memberfactory
         });
 
         modalInstance.result.then(function () {
-            init();
+            $scope.fetchMember($scope.memberId);
         }, function () {
         });
     }

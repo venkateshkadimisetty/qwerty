@@ -15,7 +15,7 @@
         <tr class="memberlist">
             <td><strong>PIN</strong></td>
             <td><strong>&nbsp;:&nbsp;</strong></td>
-            <td>{{member.pin}}</td>
+            <td>{{member.pin | uppercase}}</td>
             <!-- /.input group -->
         </tr>
         <tr class="memberlist">
@@ -32,7 +32,7 @@
                 <div class="input-group-addon">
                     <i></i>
                 </div>
-                <input type="number" name="payingFine" class="form-control"  ng-model="payingFine" required>
+                <input  type="number" name="payingFine" class="form-control"  ng-model="payingFine" required>
             </div>
             <p ng-show="memberForm.payingFine.$invalid && !memberForm.payingFine.$pristine" class="help-block">Number is required.</p>
             <p ng-if="member.fine<payingFine" class="help-block">You can not pay more fine.</p>
