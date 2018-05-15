@@ -13,8 +13,7 @@ app.controller('viewMemberCtrl',['$scope','$state','$cookieStore','memberfactory
             console.log(response);
             $scope.fechMemobj=response.data;
             $scope.memberdata=false;
-          }
-          if(response.data.length==0)
+          }else if(response.status==400)
             {
                 $scope.getmember=true;
                 $scope.memberdata=true;

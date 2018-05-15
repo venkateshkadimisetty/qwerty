@@ -82,6 +82,11 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $http
                 templateUrl: 'app/views/returnBook.html',
                 controller: 'returnBookCtrl',
                 params: { bookIssueId: null }
+            })
+            .state('dashboard.allUsers', {
+            url: '/allUsers',
+            templateUrl: 'app/views/allUsers.html',
+            controller: 'allUsersCtrl'
             });
 
 

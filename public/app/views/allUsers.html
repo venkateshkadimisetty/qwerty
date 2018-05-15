@@ -1,0 +1,41 @@
+<div class="panel panel-default">
+    <div cg-busy="{promise:myPromise,message:'Loading',backdrop:true}"></div>
+    <div  class="panel-heading">
+        <div class="input-group col-md-3 col-sm-10" style="margin: 10px; border-radius: 10px ">
+            <input type="text" class="form-control"  ng-model="searchText" placeholder="search">
+            <div class="input-group-addon">
+                <i class="fa fa-search"></i>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div style="margin: 10px">
+            View <select ng-model="viewby" ng-change="setItemsPerPage(viewby)"><option>3</option><option>5</option><option>10</option><option>20</option><option>30</option><option>40</option><option>50</option></select> records at a time.
+        </div>
+        <div class="table-responsive table-striped table-hover">
+            <table class="table table-bordered table-striped  table-condensed table-hover table-responsive">
+                <thead>
+                <tr>
+                    <th class="id" ng-click="sort_by('username')">User Name&nbsp;<i class="glyphicon pull-right" ng-class="getIcon('username')"></i></th>
+                    <th class="name" ng-click="sort_by('email')">Email Id<i class="glyphicon pull-right" ng-class="getIcon('email')"></i></th>
+                    <th class="description" ng-click="sort_by('role')">Role<i class="glyphicon pull-right" ng-class="getIcon('role')"></i></th>
+                    <th class="author" ng-click="sort_by('fine')">Fine<i class="glyphicon pull-right" ng-class="getIcon('fine')"></i></th>
+                    <th class="field5"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="user in totalUsers.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage)) | orderBy:sort.active:sort.descending | filter:searchText">
+                    <td>{{user.username | capitalize}}</td>
+                    <td>{{user.email }}</td>
+                    <td>{{user.role | capitalize}}</td>
+                    <td>{{user.fine }}</td>
+                    <td style="text-align: center"><button class="btn btn-warning btn-sm" style="margin: 5px" ng-click='editUser(user)'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button><button class="btn btn-danger btn-sm" style="margin: 5px" ng-click='delete(user)'><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+                </tr>
+                </tbody>
+            </table>
+            <div colspan="10" class="pagination pull-right">
+                <ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" items-per-page="itemsPerPage"></ul>
+            </div>
+        </div>
+    </div>
+</div>
