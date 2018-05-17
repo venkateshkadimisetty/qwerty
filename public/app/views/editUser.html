@@ -1,0 +1,62 @@
+<div class="col-md-10 col-md-offset-1" style="background-color: white;padding: 40px;border-radius: 10px">
+    <form name="userForm" id="userForm" ng-submit="editUserCall(userForm.$valid)" novalidate>
+        <div class="form-group">
+            <label>User Name:</label>
+
+            <div class="input-group ">
+                <div class="input-group-addon">
+                    <i></i>
+                </div>
+                <input type="text" name="user" class="form-control" ng-model="user.username" ng-disabled="true" required>
+            </div>
+            <p ng-show="userForm.username.$invalid && !userForm.username.$pristine" class="help-block">User Name is required.</p>
+            <!-- /.input group -->
+        </div>
+        <div class="form-group">
+            <label>Email Id:</label>
+            <div class="input-group ">
+                <div class="input-group-addon">
+                    <i></i>
+                </div>
+                <input type="email" name="emailId" class="form-control" ng-model="user.email" required>
+
+            </div>
+            <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Email Id is required.</p>
+            <!-- /.input group -->
+        </div>
+        <div class="form-group">
+            <label>Role:</label>
+
+            <div class="input-group ">
+                <div class="input-group-addon">
+                    <i></i>
+                </div>
+                <select name="role" class="form-control" ng-model="user.role" required>
+                    <option value="admin">Admin</option>
+                    <option value="user">User</option>
+                </select>
+            </div>
+            <p ng-show="userForm.role.$invalid && !userForm.role.$pristine" class="help-block">User role is required.</p>
+            <!-- /.input group -->
+        </div>
+        <div class="form-group">
+            <label>Fine Collected:</label>
+
+            <div class="input-group ">
+                <div class="input-group-addon">
+                    <i></i>
+                </div>
+                <input type="text" name="role" class="form-control" ng-model="user.fine" required readonly>
+            </div>
+            <p ng-show="userForm.role.$invalid && !userForm.role.$pristine" class="help-block">User role is required.</p>
+            <!-- /.input group -->
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-block btn-success" ng-disabled="userForm.$invalid">Update</button>
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-block btn-danger" ng-click="cancel()" >Cancel</button>
+        </div>
+    </form>
+</div>

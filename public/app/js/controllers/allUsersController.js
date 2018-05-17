@@ -21,6 +21,31 @@ app.controller('allUsersCtrl',['$scope','$state','$http','$cookieStore','userfac
         $scope.itemsPerPage = num;
         $scope.currentPage = 1; //reset to first page
     }
+    $scope.editUser=function (user) {
+        var copiedUser={};
+        angular.copy(user,copiedUser);
+        $scope.message = "Show Form Button Clicked";
+        console.log($scope.message);
+
+        var modalInstance = $uibModal.open({
+            templateUrl: 'app/views/editUser.html',
+            controller: 'ModalInstanceUserCtrl',
+            resolve: {
+                editUser:copiedUser
+            }
+        });
+        modalInstance.result.then(function () {
+            init();
+        }, function () {
+        });
+    }
+    $scope.delete=function (user) {
+            $scope.myPromise= userfactory.deleteUser(user).then(function(response) {
+                console.log(response);
+                appFactory.toast(user.username +' is Deleted ','success');
+                $state.reload();
+            });
+    }
     function init() {
         $scope.myPromise=userfactory.allUsers().then(function(response) {
             console.log(response);
@@ -29,27 +54,6 @@ app.controller('allUsersCtrl',['$scope','$state','$http','$cookieStore','userfac
         });
     }
     init();
-    /*$scope.sort_by=function (type) {
-     $scope.filterType=type;
-     }*/
-    /*$scope.editBook=function (book) {
-        var copiedBook={};
-        angular.copy(book,copiedBook);
-        $scope.message = "Show Form Button Clicked";
-        console.log($scope.message);
-
-        var modalInstance = $uibModal.open({
-            templateUrl: 'app/views/editBook.html',
-            controller: 'ModalInstanceBookCtrl',
-            resolve: {
-                editBook:copiedBook
-            }
-        });
-        modalInstance.result.then(function () {
-            init();
-        }, function () {
-        });
-    }*/
     $scope.sort = {
         active: '',
         descending: undefined
@@ -74,19 +78,5 @@ app.controller('allUsersCtrl',['$scope','$state','$http','$cookieStore','userfac
         }
         return 'glyphicon-sort';
     }
-
-
-   /* $scope.delete=function (book) {
-        if(book.isAvailable==false){
-            appFactory.toast('Please Collect Book to Delete','danger');
-        }
-        else if(confirm("Are you sure you want to delete this book?!")){
-            $scope.myPromise= bookfactory.deleteBook(book).then(function(response) {
-                console.log(response);
-                appFactory.toast('Book Deleted with ID:'+book.bookId,'success');
-                $state.reload();
-            });
-        }
-    }*/
 }]);
 

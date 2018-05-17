@@ -11,6 +11,13 @@ app.controller('userProfileCtrl',['$scope','$state','$http','$cookieStore','user
     }
     $scope.updateProfile=function (userData) {
         $scope.edit=true;
+        $scope.myPromise= userfactory.updateProfle($scope.userData1).then(function(response) {
+            if(response.status== 200)
+            {
+                console.log(response);
+                appFactory.toast('User updated successfully','success');
+            }
+        });
     }
     $scope.back=function(userData){
         $scope.edit=true;

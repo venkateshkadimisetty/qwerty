@@ -18,15 +18,14 @@
                     <tr class="memberlist">
                         <td><strong>User Name </strong></td>
                         <td><strong></strong>&nbsp;&nbsp;:&nbsp;&nbsp;</strong></td>
-                        <td><span  ng-if="edit">{{userData.username}}</span>
-                            <span ng-if="!edit"><input type="text" name="userName" class="form-control"  ng-model="userData1.username"></span>
-                        </td>
+                        <td>{{userData.username}}</td>
                     </tr>
                     <tr class="memberlist">
                         <td><strong>Email Id </strong></td>
                         <td><strong></strong>&nbsp;&nbsp;:&nbsp;&nbsp;</strong></td>
-                        <td><span >{{userData.email}}</span>
-                            <!--<span ng-if="!edit"><input type="text" name="memberName" class="form-control"  ng-model="fechMemobj.firstName"></span>-->
+                        <td><span ng-if="edit">{{userData.email}}</span>
+                            <span ng-if="!edit"><input type="email" name="email" class="form-control"  ng-model="userData1.email"></span>
+                            <p ng-show="userData1.email.$invalid && !userData1.email.$pristine" class="help-block">Email Id is required.</p>
                         </td>
                     </tr>
                     <tr class="memberlist">

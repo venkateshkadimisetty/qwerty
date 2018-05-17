@@ -5,6 +5,7 @@ app.controller('DashboardCtrl',function($scope,$state,$http,$cookieStore){
    angular.element(document).ready(function () {
       $('#pageSubmenu').toggle();
       $('#pageSubmenu1').toggle();
+      $('#userSubmenu').toggle();
       $('#sidebarCollapse').on('click', function () {
          $('#sidebar').toggleClass('active');
       });

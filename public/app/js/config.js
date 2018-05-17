@@ -27,6 +27,10 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $http
                 url: '/jobs',
                 templateUrl: 'app/views/home.html'
             })
+            .state('dashboard.about', {
+                url: '/about',
+                templateUrl: 'app/views/about.html'
+            })
             .state('dashboard.createBook', {
                 url: '/createBook',
                 templateUrl: 'app/views/createBook.html',
@@ -71,6 +75,11 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $http
                 url: '/userProfile',
                 templateUrl: 'app/views/userprofile.html',
                 controller: 'userProfileCtrl'
+            })
+            .state('dashboard.createUser', {
+                url: '/createUser',
+                templateUrl: 'app/views/createUser.html',
+                controller: 'createUserCtrl'
             })
             .state('dashboard.issuedBooks', {
                 url: '/issuedBooks',
