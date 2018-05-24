@@ -1,8 +1,42 @@
-<div class="panel col-md-11 col-sm-11">
-    <div class="panel-body ">
-        <div class="row">
-            <hc-chart class="col-md-12 col-sm-12"  options="chartOptions">Placeholder for generic chart</hc-chart>
-            <hc-pie-chart class="col-md-12 col-sm-12"  title="Browser usage" data="pieData">Placeholder for pie chart</hc-pie-chart>
+<div class="row">
+    <div cg-busy="{promise:myPromise,message:'Loading',backdrop:true}"></div>
+    <div class="col-md-5 col-md-offset-1" style="text-align: center; width: 100%">
+        <toaster-container  style="width: 100%; padding: 10px; text-align: center; " toaster-options="{'close-button':false, 'time-out':{ 'toast-warning': 2000, 'toast-error': 0 } }"></toaster-container>
+    </div>
+    <div class="panel panel-default col-md-5  col-sm-11" style="margin: 50px; margin-top: 20px; min-height: 600px">
+        <div  class="panel-heading">
+            <h3 style="text-align: center; margin-bottom: 20px">Books Statistics By Department</h3>
+        </div>
+        <div class="panel-body">
+            <div class="col-md-12  col-sm-11" style="margin-top: 20px">
+                <canvas id="pie" class="chart chart-pie"
+                        chart-data="data" chart-labels="labels" chart-options="options">
+                </canvas>
+            </div>
         </div>
     </div>
+    <div class="panel panel-default col-md-5  col-sm-11" style="margin: 50px; margin-top: 20px; min-height: 600px">
+        <div  class="panel-heading">
+            <h3 style="text-align: center; margin-bottom: 20px">Members Statistics By Department</h3>
+        </div>
+        <div class="panel-body">
+            <div1 class="col-md-12" style="margin-top: 20px">
+                <canvas id="pie1" class="chart chart-pie"
+                        chart-data="memdata" chart-labels="memlabels" chart-options="memoptions">
+                </canvas>
+            </div1>
+        </div>
+    </div>
+    <!--<div class="panel panel-default" style="margin: 50px; margin-top: 20px; min-height: 600px">
+        <div  class="panel-heading">
+            <h3 style="text-align: center; margin-bottom: 20px">Books Statistics By Department</h3>
+        </div>
+        <div class="panel-body">
+            <div class="col-md-9 col-md-offset-1 col-sm-11" style="margin-top: 20px">
+                <canvas id="pie" class="chart chart-pie"
+                        chart-data="data" chart-labels="labels" chart-options="options">
+                </canvas>
+            </div>
+        </div>
+    </div>-->
 </div>

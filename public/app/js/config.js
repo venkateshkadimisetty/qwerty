@@ -8,7 +8,9 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $http
         $httpProvider.defaults.headers.post = {};
         $httpProvider.defaults.headers.put = {};
         $httpProvider.defaults.headers.patch = {};*/
-
+    (function (ChartJsProvider) {
+        ChartJsProvider.setOptions({ colors : [ '#803690', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'] });
+    });
     $urlRouterProvider.otherwise('/login'),
 
         $stateProvider
