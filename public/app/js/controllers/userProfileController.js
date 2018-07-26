@@ -16,6 +16,7 @@ app.controller('userProfileCtrl',['$scope','$state','$http','$cookieStore','user
             {
                 console.log(response);
                 appFactory.toast('User updated successfully','success');
+                init();
             }
         });
     }

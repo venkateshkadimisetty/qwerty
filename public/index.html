@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Library Management Dashboard</title>
+
     <script data-require="angular.js@1.4.3" data-semver="1.4.3" src="https://code.angularjs.org/1.4.3/angular.js"></script>
     <script data-require="ui-router@*" data-semver="0.2.14" src="//rawgit.com/angular-ui/ui-router/0.2.14/release/angular-ui-router.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-cookies.js"></script>
@@ -16,6 +17,7 @@
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/2.1.0/toaster.js"></script>-->
     <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
     <script type="text/javascript" src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script>document.write('<base href="' + location.pathname + '" />'  );</script>
 
     <!--toast-->
     <script data-require="angular-sanitize@*" data-semver="1.4.0-rc.0" src="https://code.angularjs.org/1.4.0-rc.0/angular-sanitize.js"></script>
@@ -31,35 +33,14 @@
     <script src="app/lib/angular-busy.js"></script>
     <link rel="stylesheet" href="style4.css">
 
+    <script src="app/lib/ocLazyLoad.min.js"></script>
     <script type="text/javascript" src="app/lib/Chart.min.js"></script>
     <script type="text/javascript" src="app/lib/angular-chart.min.js"></script>
     <script src="app/js/app.js"></script>
     <script src="app/js/config.js"></script>
-    <script src="app/js/controllers/login-controller.js"></script>
-    <script src="app/js/controllers/dashboardController.js"></script>
+
     <script src="app/js/factories/appFactory.js"></script>
-    <script src="app/js/factories/memberFactory.js"></script>
-    <script src="app/js/factories/bookFactory.js"></script>
-    <script src="app/js/factories/userProfileFactory.js"></script>
-    <script src="app/js/controllers/createBookController.js"></script>
-    <script src="app/js/controllers/createMember.js"></script>
-    <script src="app/js/controllers/allMembersController.js"></script>
-    <script src="app/js/controllers/allbooksController.js"></script>
-    <script src="app/js/controllers/updateMemberCotroller.js"></script>
-    <script src="app/js/controllers/updateBookController.js"></script>
-    <script src="app/js/filters/customFilter.js"></script>
-    <script src="app/js/controllers/chartsController.js"></script>
-    <script src="app/js/controllers/issueBookController.js"></script>
-    <script src="app/js/controllers/viewMemberController.js"></script>
-    <script src="app/js/controllers/viewBookController.js"></script>
-    <script src="app/js/controllers/returnBookController.js"></script>
-    <script src="app/js/controllers/payFineController.js"></script>
-    <script src="app/js/controllers/createUserController.js"></script>
-    <script src="app/js/controllers/userProfileController.js"></script>
-    <script src="app/js/controllers/issuedBooksLogController.js"></script>
-    <script src="app/js/controllers/allUsersController.js"></script>
-    <script src="app/js/controllers/updateUserController.js"></script>
-    <script src="app/js/factories/excel-factory.js"></script>
+
 </head>
 <body data-ng-app="myApp" style="background: url('./app/images/background.jpg');background-size: cover;background-position: center;background-attachment: fixed;background-repeat: no-repeat;">
  <div>
