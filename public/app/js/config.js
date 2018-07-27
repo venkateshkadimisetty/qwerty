@@ -295,5 +295,6 @@ app.config(function($stateProvider,$ocLazyLoadProvider, $urlRouterProvider, $loc
             });
 
            //$locationProvider.html5Mode(true);
+           //$locationProvider.hashPrefix('');
 
 });

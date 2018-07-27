@@ -67,9 +67,9 @@
                         <td><strong>DOB</strong></td>
                         <td><strong>&nbsp;&nbsp;:&nbsp;&nbsp;</strong></td>
                         <td><span ng-if="edit">{{fechMemobj.dob | date:'dd MMM yyyy'}}</span>
-                            <span ng-if="!edit">
-                                <input type="text" name="dob" class="form-control" uib-datepicker-popup="{{format}}"  ng-model="fechMemobj1.dob" is-open="opened" max-date="maxDate" datepicker-options="dateOptions"  ng-required="true" close-text="Close" required />
-                            <span class="input-group-btn">
+                            <span ng-if="!edit" class="input-group ">
+                            <input type="text" name="dob" class="form-control" uib-datepicker-popup="{{format}}"  ng-model="fechMemobj1.dob" is-open="opened" max-date="maxDate" datepicker-options="dateOptions"  ng-required="true" close-text="Close" required />
+                                <span class="input-group-btn">
                             <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
                             </span>
                             </span>
