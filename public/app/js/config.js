@@ -124,7 +124,8 @@ app.config(function($stateProvider,$ocLazyLoadProvider, $urlRouterProvider, $loc
                         return $ocLazyLoad.load({
                             name:'myApp',
                             files:[
-                                'app/js/controllers/allbooksController.js'
+                                'app/js/controllers/allbooksController.js',
+                                'app/js/controllers/updateBookController.js'
                             ]
                         })
                     }
@@ -139,7 +140,8 @@ app.config(function($stateProvider,$ocLazyLoadProvider, $urlRouterProvider, $loc
                             return $ocLazyLoad.load({
                                 name:'myApp',
                                 files:[
-                                    ' app/js/controllers/allMembersController.js'
+                                    ' app/js/controllers/allMembersController.js',
+                                    ' app/js/controllers/updateMemberController.js'
                                 ]
                             })
                         }
@@ -171,7 +173,7 @@ app.config(function($stateProvider,$ocLazyLoadProvider, $urlRouterProvider, $loc
                             name:'myApp',
                             files:[
                                 'app/js/controllers/viewMemberController.js',
-                                'app/js/controllers/updateMemberCotroller.js',
+                                'app/js/controllers/updateMemberController.js',
                                 'app/js/controllers/payFineController.js'
 
                             ]
@@ -287,6 +289,7 @@ app.config(function($stateProvider,$ocLazyLoadProvider, $urlRouterProvider, $loc
                             name:'myApp',
                             files:[
                                 'app/js/controllers/allUsersController.js',
+                                'app/js/controllers/updateUserController.js',
 
                             ]
                         })
@@ -294,7 +297,8 @@ app.config(function($stateProvider,$ocLazyLoadProvider, $urlRouterProvider, $loc
                 }
             });
 
-           //$locationProvider.html5Mode(true);
+        /*   $locationProvider.html5Mode(true);
+           $locationProvider.hashPrefix('!');*/
            //$locationProvider.hashPrefix('');
 
 });
